@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #fffdf8;
+  color: #263735;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jl-home-sections {
+  --jl-cream: #fffdf8;
+  --jl-teal: #164e52;
+  --jl-teal-dark: #103d40;
+  --jl-sage: #e8eee5;
+  --jl-gold: #b89552;
+  --jl-ink: #263735;
+  --jl-muted: #737d76;
+  color: var(--jl-ink);
+  background: var(--jl-cream);
+  overflow: hidden;
+}
+
+.jl-container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.jl-home-sections section { padding-block: 88px; }
+.jl-local-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.jl-eyebrow { display: inline-block; color: var(--jl-gold); font-size: 11px; font-weight: 700; letter-spacing: .18em; line-height: 1.6; text-transform: uppercase; }
+.jl-section-heading { max-width: 650px; margin-bottom: 34px; }
+
+.jl-section-heading h2,
+.jl-discover-content h2,
+.jl-business-intro h2,
+.jl-listing-inner h2 {
+  margin: 10px 0 14px;
+  color: var(--jl-teal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3.3vw, 44px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.14;
+}
+
+.jl-section-heading p,
+.jl-discover-content > p,
+.jl-business-intro > p,
+.jl-listing-inner p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--jl-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.jl-text-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; color: var(--jl-teal); font-size: 13px; font-weight: 700; text-decoration: none; }
+.jl-text-link span, .jl-outline-link span { transition: transform 180ms ease; }
+.jl-text-link:hover span, .jl-outline-link:hover span { transform: translate(3px, -3px); }
+
+.jl-discover { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; width: 100%; max-width: 1300px; margin: 0 auto; padding: 72px 24px; box-sizing: border-box; }
+.jl-discover-image { position: relative; width: 100%; height: 500px; overflow: hidden; border-radius: 6px 90px 6px 6px; background: var(--jl-sage); }
+.jl-discover-image > img, .jl-discover-image .jl-local-image { display: block; width: 100%; height: 100%; object-fit: cover; }
+.jl-image-caption { position: absolute; right: 16px; bottom: 16px; left: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 16px; background: rgba(7, 60, 59, .92); color: #fffdf8; font-size: 11px; letter-spacing: .5px; }
+.jl-discover-content { min-width: 0; width: 100%; }
+.jl-discover-content h2 { margin: 14px 0 20px; font-size: clamp(34px, 3.4vw, 52px); line-height: 1.12; color: #164e52; }
+.jl-discover-content > p { margin: 0 0 14px; color: #687b7b; font-size: 15px; line-height: 1.85; }
+.jl-highlights { display: grid; gap: 14px; margin: 24px 0; padding: 0; list-style: none; }
+.jl-highlights li { display: flex; align-items: center; gap: 14px; color: #294b4b; font-size: 14px; line-height: 1.6; }
+.jl-check { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid #dce3d7; border-radius: 50%; color: #b89552; font-size: 12px; }
+
+.jl-categories-section, .jl-news-section { background: #f5f4ed; }
+.jl-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.jl-category-card { min-width: 0; overflow: hidden; border: 1px solid #e9e6dc; background: var(--jl-cream); color: inherit; text-decoration: none; transition: transform 220ms ease, box-shadow 220ms ease; }
+.jl-category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgb(22 78 82 / 9%); }
+.jl-category-image { position: relative; height: 215px; overflow: hidden; background: var(--jl-sage); }
+.jl-category-image .jl-local-image, .jl-project-image .jl-local-image { transition: transform 400ms ease; }
+.jl-category-card:hover .jl-local-image, .jl-project-card:hover .jl-local-image { transform: scale(1.045); }
+.jl-card-number { position: absolute; top: 13px; left: 13px; display: grid; width: 32px; height: 32px; place-items: center; background: var(--jl-cream); color: var(--jl-teal); font-size: 10px; }
+.jl-card-arrow { position: absolute; right: 13px; bottom: 13px; display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; background: var(--jl-teal); color: white; font-size: 18px; }
+.jl-category-copy { padding: 20px 20px 22px; }
+
+.jl-category-copy h3,
+.jl-project-copy h3,
+.jl-service-copy h3 {
+  margin: 0;
+  color: var(--jl-teal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.jl-category-copy p, .jl-project-copy p, .jl-service-copy p { margin: 9px 0 0; color: var(--jl-muted); font-size: 12px; line-height: 1.8; }
+.jl-card-link { display: inline-block; margin-top: 17px; color: var(--jl-teal); font-size: 11px; font-weight: 700; }
+.jl-heading-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.jl-heading-row .jl-section-heading { margin-bottom: 0; }
+.jl-outline-link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; padding: 12px 16px; border: 1px solid #d6ddd5; color: var(--jl-teal); font-size: 12px; font-weight: 700; text-decoration: none; }
+
+.jl-project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.jl-project-card { min-width: 0; }
+.jl-project-image { position: relative; display: block; overflow: hidden; }
+.jl-project-image .jl-local-image { display: block; width: 100%; height: 260px; object-fit: cover; }
+.jl-project-tag { position: absolute; left: 14px; bottom: 14px; }
+.jl-project-copy { padding-top: 20px; }
+.jl-project-copy h3 { margin: 8px 0; }
+.jl-project-copy p { margin-bottom: 18px; }
+
+.jl-business-section { background: var(--jl-sage); }
+.jl-business-layout { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: clamp(36px, 7vw, 90px); }
+.jl-business-intro h2 { font-size: clamp(32px, 3.5vw, 46px); }
+.jl-dark-button, .jl-gold-button { display: inline-flex; align-items: center; justify-content: center; gap: 13px; min-height: 48px; margin-top: 24px; padding: 0 20px; background: var(--jl-teal); color: white; font-size: 12px; font-weight: 700; text-decoration: none; transition: background 180ms ease; }
+.jl-dark-button:hover { background: var(--jl-teal-dark); }
+.jl-business-list { border-top: 1px solid #cfd8cc; }
+.jl-business-row { position: relative; display: flex; align-items: center; gap: 17px; min-height: 122px; padding: 18px 0; color: inherit; text-decoration: none; }
+.jl-business-thumb { width: 84px; height: 84px; flex: 0 0 84px; object-fit: cover; }
+.jl-business-info { flex: 1; min-width: 0; }
+.jl-business-category { color: var(--jl-gold); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.jl-business-info h3 { margin: 5px 0; color: var(--jl-teal); font-family: Georgia, "Times New Roman", serif; font-size: 20px; font-weight: 400; }
+.jl-business-info p { margin: 0; color: var(--jl-muted); font-size: 11px; line-height: 1.7; }
+.jl-business-arrow { color: var(--jl-teal); font-size: 21px; transition: transform 180ms ease; }
+.jl-business-row:hover .jl-business-arrow { transform: translate(3px, -3px); }
+.jl-business-divider { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: #cfd8cc; }
+
+.jl-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.jl-service-panel { display: grid; grid-template-columns: .9fr 1fr; min-height: 290px; border: 1px solid #e8e6dc; background: white; }
+.jl-service-image { min-height: 290px; overflow: hidden; background: var(--jl-sage); }
+.jl-service-copy { align-self: center; padding: 23px; }
+.jl-service-copy h3 { margin-top: 10px; font-size: 27px; }
+.jl-service-copy .jl-text-link { gap: 7px; font-size: 11px; }
+
+.jl-news-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; }
+.jl-news-feature { position: relative; display: block; min-height: 440px; overflow: hidden; background: var(--jl-teal); color: white; text-decoration: none; }
+.jl-news-feature > .jl-local-image { position: absolute; inset: 0; transition: transform 400ms ease; }
+.jl-news-feature:hover > .jl-local-image { transform: scale(1.035); }
+.jl-news-feature::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 15%, rgb(9 35 35 / 82%) 100%); content: ""; }
+.jl-news-overlay { position: absolute; z-index: 1; right: 25px; bottom: 27px; left: 25px; display: grid; gap: 12px; }
+.jl-news-label { color: var(--jl-gold); font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.jl-news-title { max-width: 440px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(26px, 3vw, 37px); line-height: 1.2; }
+.jl-news-cta, .jl-news-read { font-size: 11px; font-weight: 700; }
+.jl-news-side { display: grid; gap: 20px; }
+.jl-news-item { display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 19px; min-height: 205px; padding-bottom: 20px; border-bottom: 1px solid #dcded4; color: inherit; text-decoration: none; }
+.jl-news-item:last-child { padding-bottom: 0; border-bottom: 0; }
+.jl-news-item > .jl-local-image { height: 160px; background: var(--jl-sage); }
+.jl-news-item h3 { margin: 10px 0; color: var(--jl-teal); font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 400; line-height: 1.3; }
+.jl-news-read { color: var(--jl-teal); }
+
+.jl-listing-cta { background: var(--jl-teal); }
+.jl-listing-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+.jl-eyebrow-light { color: #e2c58e; }
+.jl-listing-inner h2 { color: white; }
+.jl-listing-inner p { max-width: 560px; color: #d8e4df; }
+.jl-gold-button { flex: 0 0 auto; min-height: 52px; margin-top: 0; background: #d9b783; color: #243b35; }
+.jl-gold-button:hover { background: #e6c999; }
+
+/* Discover section responsive */
+@media (max-width: 768px) {
+  .jl-discover { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+  .jl-discover-image { height: 340px; border-radius: 6px 60px 6px 6px; }
+  .jl-discover-content h2 { font-size: 36px; }
+}
+
+@media (max-width: 480px) {
+  .jl-discover-image { height: 280px; }
+  .jl-image-caption { left: 8px; right: 8px; bottom: 8px; padding: 12px; font-size: 9px; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .jl-home-sections section { padding-block: 66px; }
+  .jl-discover { gap: 35px; }
+  .jl-discover-image { height: 390px; }
+  .jl-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jl-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jl-business-layout { grid-template-columns: 1fr; gap: 34px; }
+  .jl-service-grid { grid-template-columns: 1fr; }
+  .jl-news-layout { grid-template-columns: 1fr; }
+  .jl-news-feature { min-height: 380px; }
+  .jl-news-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jl-news-item { grid-template-columns: 1fr; align-content: start; }
+  .jl-news-item > .jl-local-image { height: 170px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .jl-container { width: min(calc(100% - 32px), 480px); }
+  .jl-home-sections section { padding-block: 49px; }
+  .jl-section-heading { margin-bottom: 24px; }
+  .jl-section-heading h2, .jl-discover-content h2, .jl-business-intro h2, .jl-listing-inner h2 { font-size: 32px; }
+  .jl-discover { grid-template-columns: 1fr; gap: 26px; }
+  .jl-discover-image { height: 300px; border-top-right-radius: 62px; }
+  .jl-category-grid { gap: 12px; }
+  .jl-category-image { height: 145px; }
+  .jl-category-copy { padding: 14px 12px 16px; }
+  .jl-category-copy h3 { font-size: 19px; }
+  .jl-category-copy p { font-size: 11px; }
+  .jl-card-link { margin-top: 12px; font-size: 10px; }
+  .jl-heading-row { align-items: flex-start; flex-direction: column; gap: 17px; }
+  .jl-project-grid { grid-template-columns: 1fr; gap: 18px; }
+  .jl-project-image { height: 235px; }
+  .jl-project-copy { padding: 20px; }
+  .jl-business-row { gap: 12px; }
+  .jl-business-thumb { width: 66px; height: 66px; flex-basis: 66px; }
+  .jl-business-info h3 { font-size: 18px; }
+  .jl-business-info p { font-size: 10px; }
+  .jl-service-panel { grid-template-columns: 1fr; }
+  .jl-service-image { height: 210px; min-height: 210px; }
+  .jl-service-copy { padding: 22px; }
+  .jl-news-feature { min-height: 330px; }
+  .jl-news-overlay { right: 18px; bottom: 20px; left: 18px; }
+  .jl-news-side { grid-template-columns: 1fr; gap: 18px; }
+  .jl-news-item { grid-template-columns: 112px 1fr; min-height: 125px; gap: 14px; padding-bottom: 18px; }
+  .jl-news-item > .jl-local-image { height: 112px; }
+  .jl-news-item h3 { font-size: 19px; }
+  .jl-listing-inner { align-items: flex-start; flex-direction: column; }
+  .jl-gold-button { margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jl-home-sections *, .jl-home-sections *::before, .jl-home-sections *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Footer */
+.jl-footer { background: #103f40; color: #fffdf7; padding: 34px 6% 16px; }
+.jl-footer-main { display: grid; grid-template-columns: 1.1fr 1fr .9fr; gap: clamp(36px, 5vw, 76px); max-width: 1300px; margin: 0 auto; align-items: start; }
+.jl-footer-brand { max-width: 340px; }
+.jl-footer-logo { display: inline-flex; align-items: center; gap: 12px; color: #fffdf7; text-decoration: none; }
+.jl-footer-logo-mark { display: flex; width: 44px; height: 44px; flex-shrink: 0; align-items: center; justify-content: center; border: 1px solid #d9b783; border-radius: 50%; background: #164e52; color: #fffdf7; font-size: 14px; font-weight: 700; }
+.jl-footer-logo-text { display: flex; flex-direction: column; gap: 4px; }
+.jl-footer-logo-text strong { font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 600; }
+.jl-footer-logo-text small { color: #d9b783; font-size: 9px; font-weight: 700; letter-spacing: 2px; }
+.jl-footer-brand > p, .jl-footer-information > p { margin: 15px 0 0; color: #d0ddd7; font-size: 13px; line-height: 1.85; }
+.jl-footer-explore h3, .jl-footer-information h3 { margin: 5px 0 19px; color: #fffdf7; font-size: 14px; font-weight: 600; }
+.jl-footer-explore nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 26px; row-gap: 15px; }
+.jl-footer-explore nav a, .jl-footer-information > a { color: #d0ddd7; font-size: 12px; line-height: 1.6; text-decoration: none; transition: color .2s ease; }
+.jl-footer-explore nav a:hover, .jl-footer-information > a:hover { color: #e5c895; }
+.jl-footer-information > a { display: inline-block; margin-top: 17px; color: #e5c895; font-weight: 600; }
+.jl-footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; max-width: 1300px; margin: 27px auto 0; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .16); }
+.jl-footer-bottom p, .jl-footer-bottom span { margin: 0; color: #cbd9d3; font-size: 11px; line-height: 1.6; }
+.jl-footer-bottom span { color: #d9b783; letter-spacing: 1px; }
+
+@media (max-width: 900px) {
+  .jl-footer-main { grid-template-columns: 1fr 1fr; gap: 32px 40px; }
+  .jl-footer-brand { max-width: 400px; }
+  .jl-footer-information { grid-column: 1 / -1; max-width: 500px; }
+}
+
+@media (max-width: 560px) {
+  .jl-footer { padding: 30px 22px 16px; }
+  .jl-footer-main { grid-template-columns: 1fr; gap: 28px; }
+  .jl-footer-information { grid-column: auto; }
+  .jl-footer-explore nav { column-gap: 20px; row-gap: 13px; }
+  .jl-footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; margin-top: 23px; }
+}
+
+@media (max-width: 768px) {
+  .jl-discover { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+  .jl-discover-image { height: 340px; border-radius: 6px 60px 6px 6px; }
+  .jl-discover-content h2 { font-size: 36px; }
+}
+
+@media (max-width: 480px) {
+  .jl-discover-image { height: 280px; }
+  .jl-image-caption { left: 8px; right: 8px; bottom: 8px; padding: 12px; font-size: 9px; }
+}
