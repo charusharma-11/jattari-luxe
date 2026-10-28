@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 
@@ -104,12 +105,12 @@ export default function HistoryCulturePage() {
                   </span>
                 </a>
 
-                <a
+                <Link
                   href="/explore-jattari"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#D9B783] hover:bg-white/15"
                 >
                   Explore Jattari
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -411,13 +412,13 @@ export default function HistoryCulturePage() {
                 in Jattari.
               </p>
 
-              <a
+              <Link
                 href="/local-businesses"
                 className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-bold text-[#103F40] transition duration-300 hover:-translate-y-1 hover:bg-[#E8D2AC]"
               >
                 Explore Local Businesses
                 <span aria-hidden="true">↗</span>
-              </a>
+              </Link>
             </div>
 
             <div className="overflow-hidden rounded-2xl">
@@ -448,21 +449,21 @@ export default function HistoryCulturePage() {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="/explore-jattari"
                 className="inline-flex items-center gap-2 rounded-full bg-[#164E52] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40]"
               >
                 Back to Explore Jattari
                 <span aria-hidden="true">←</span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/explore-jattari/areas-neighbourhoods"
                 className="inline-flex items-center gap-2 rounded-full border border-[#164E52] px-7 py-4 text-sm font-semibold text-[#164E52] transition hover:-translate-y-1 hover:bg-[#E8EEE5]"
               >
                 Areas & Neighbourhoods
                 <span aria-hidden="true">↗</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

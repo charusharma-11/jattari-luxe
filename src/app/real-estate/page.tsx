@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ContactButton from "../../components/ContactButton";
 
 import {
   ArrowRight,
@@ -73,6 +74,30 @@ const featuredProjects = [
       "Discover the project and review its official information before making property decisions.",
     image: "/images/skyline aero homes.jpg",
     href: "https://skylineaerohomes.com/",
+  },
+  {
+    name: "Shree Balaji Group",
+    description:
+      "Promotes A1 City, a residential plotted development near the Yamuna Expressway and Noida International Airport.",
+    image: "/images/hub-fields.jpg",
+  },
+  {
+    name: "Chhabra Properties",
+    description:
+      "A property dealer and real estate consultant serving Noida, Greater Noida and Yamuna Expressway, with residential and commercial options, villas and plots.",
+    image: "/images/residential-home.jpg",
+  },
+  {
+    name: "Maxrow Properties",
+    description:
+      "Provides real estate advisory across Noida, Greater Noida and Yamuna Expressway, covering industrial, commercial, residential and investment properties.",
+    image: "/images/residential-building.jpg",
+  },
+  {
+    name: "Truevisory Realty",
+    description:
+      "Offers curated property options with buying guidance, investment advisory and legal assistance.",
+    image: "/images/hub-building-right.jpg",
   },
 ];
 
@@ -346,15 +371,22 @@ export default function RealEstatePage() {
                   {project.description}
                 </p>
 
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white"
-                >
-                  Visit project website
-                  <ArrowUpRight size={16} />
-                </a>
+                {project.href ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white"
+                  >
+                    Visit project website
+                    <ArrowUpRight size={16} />
+                  </a>
+                ) : (
+                  <ContactButton className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white">
+                    Contact
+                    <ArrowUpRight size={16} />
+                  </ContactButton>
+                )}
               </div>
             </article>
           ))}
@@ -424,13 +456,12 @@ export default function RealEstatePage() {
               available options in and around Jattari.
             </p>
 
-            <Link
-              href="/list-your-business"
+            <ContactButton
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#FFFDF8] px-6 py-3.5 text-sm font-semibold text-[#164E52] transition duration-300 hover:-translate-y-1 hover:bg-[#D9B783]"
             >
-              List your property
+              Contact
               <ArrowUpRight size={17} />
-            </Link>
+            </ContactButton>
           </div>
         </div>
       </section>

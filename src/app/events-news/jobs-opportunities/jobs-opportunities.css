@@ -1,0 +1,346 @@
+.jobs-page {
+          --cream: #fff5e1;
+          --white: #fffdf8;
+          --teal: #103f40;
+          --gold: #d9b783;
+          --gold-dark: #987646;
+          --muted: #6e7772;
+          background: var(--cream);
+          color: var(--teal);
+          overflow: hidden;
+        }
+
+        :where(.jobs-page) .jobs-hero {
+          min-height: 510px;
+          display: grid;
+          place-items: center;
+          position: relative;
+          padding: 75px 24px;
+          text-align: center;
+          background:
+            linear-gradient(
+               rgba(255, 245, 225, 0.35),
+    rgba(255, 245, 225, 0.45)
+            ),
+            url("/images/jobimages.jpg") center / cover no-repeat;
+          border-bottom: 1px solid var(--gold);
+        }
+
+        :where(.jobs-page) .hero-content {
+          max-width: 800px;
+          animation: rise 0.8s ease both;
+        }
+
+        :where(.jobs-page) .hero-content > span,
+:where(.jobs-page) .label {
+          color: var(--gold-dark);
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          line-height: 1.8;
+        }
+
+        :where(.jobs-page) .jobs-hero h1 {
+          font-size: clamp(40px, 6vw, 72px);
+          font-weight: 500;
+          letter-spacing: -2px;
+          line-height: 1.1;
+          margin: 24px 0;
+        }
+
+        :where(.jobs-page) h1 em,
+:where(.jobs-page) h2 em {
+          color: var(--gold-dark);
+          font-family: Georgia, serif;
+          font-weight: 400;
+        }
+
+        :where(.jobs-page) .hero-content p,
+:where(.jobs-page) .jobs-intro p,
+:where(.jobs-page) .section-heading > p,
+:where(.jobs-page) .career-tips p,
+:where(.jobs-page) .jobs-cta p {
+          color: var(--muted);
+          font-size: 13px;
+          line-height: 1.9;
+        }
+
+        :where(.jobs-page) .hero-content p {
+          max-width: 590px;
+          margin: auto;
+        }
+
+        :where(.jobs-page) .jobs-btn {
+          display: inline-block;
+          margin-top: 25px;
+          padding: 14px 21px;
+          background: var(--teal);
+          border: 1px solid var(--teal);
+          color: var(--cream);
+          text-decoration: none;
+          font-size: 12px;
+          transition: 0.3s ease;
+        }
+
+        :where(.jobs-page) .jobs-btn:hover {
+          color: var(--teal);
+          background: transparent;
+          transform: translateY(-3px);
+        }
+
+        :where(.jobs-page) .jobs-intro {
+          max-width: 850px;
+          margin: auto;
+          padding: 85px 24px;
+          text-align: center;
+        }
+
+        :where(.jobs-page) h2 {
+          font-size: clamp(32px, 4vw, 48px);
+          font-weight: 500;
+          letter-spacing: -1.5px;
+          line-height: 1.2;
+          margin: 15px 0;
+        }
+
+        :where(.jobs-page) .jobs-intro p {
+          max-width: 650px;
+          margin: auto;
+        }
+
+        :where(.jobs-page) .jobs-section {
+          max-width: 1200px;
+          margin: auto;
+          padding: 30px 28px 95px;
+          scroll-margin-top: 25px;
+        }
+
+        :where(.jobs-page) .section-heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 25px;
+          margin-bottom: 28px;
+        }
+
+        :where(.jobs-page) .section-heading h2 {
+          margin-bottom: 0;
+        }
+
+        :where(.jobs-page) .section-heading > p {
+          max-width: 320px;
+        }
+
+        :where(.jobs-page) .job-search {
+          width: 100%;
+          padding: 15px 17px;
+          margin-bottom: 25px;
+          background: var(--white);
+          border: 1px solid var(--gold);
+          outline-color: var(--teal);
+          color: var(--teal);
+          font: inherit;
+          font-size: 12px;
+        }
+
+        :where(.jobs-page) .jobs-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 22px;
+        }
+
+        :where(.jobs-page) .job-card {
+          background: var(--white);
+          border: 1px solid rgba(217, 183, 131, 0.7);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        :where(.jobs-page) .job-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px #103f4012;
+        }
+
+        :where(.jobs-page) .job-card img {
+          display: block;
+          width: 100%;
+          height: 175px;
+          object-fit: cover;
+        }
+
+        :where(.jobs-page) .job-content {
+          padding: 24px;
+        }
+
+        :where(.jobs-page) .job-content h3 {
+          font-size: 20px;
+          font-weight: 500;
+          margin: 0 0 12px;
+        }
+
+        :where(.jobs-page) .job-content p {
+          min-height: 72px;
+          color: var(--muted);
+          font-size: 12px;
+          line-height: 1.85;
+        }
+
+        :where(.jobs-page) .job-content a,
+:where(.jobs-page) .tips-link {
+          display: inline-block;
+          margin-top: 10px;
+          padding-bottom: 6px;
+          border-bottom: 1px solid var(--gold);
+          color: var(--teal);
+          font-size: 12px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        :where(.jobs-page) .notice {
+          margin-top: 25px;
+          color: var(--muted);
+          font-size: 11px;
+          line-height: 1.8;
+        }
+
+        :where(.jobs-page) .career-tips {
+          padding: 85px 28px;
+          background: var(--teal);
+          color: var(--cream);
+        }
+
+        :where(.jobs-page) .tips-inner {
+          max-width: 1144px;
+          margin: auto;
+          display: grid;
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 65px;
+        }
+
+        :where(.jobs-page) .career-tips .label {
+          color: var(--gold);
+        }
+
+        :where(.jobs-page) .career-tips h2 {
+          margin-top: 20px;
+        }
+
+        :where(.jobs-page) .career-tips h2 em {
+          color: var(--gold);
+        }
+
+        :where(.jobs-page) .career-tips p {
+          color: #fff5e1b8;
+        }
+
+        :where(.jobs-page) .tips-link {
+          color: var(--cream);
+        }
+
+        :where(.jobs-page) .tips-list {
+          border-top: 1px solid #d9b78366;
+        }
+
+        :where(.jobs-page) .tip {
+          display: grid;
+          grid-template-columns: 35px 1fr;
+          align-items: start;
+          gap: 15px;
+          padding: 17px 0;
+          border-bottom: 1px solid #d9b78366;
+        }
+
+        :where(.jobs-page) .tip span {
+          color: var(--gold);
+          font-size: 11px;
+        }
+
+        :where(.jobs-page) .tip p {
+          margin: 0;
+        }
+
+        :where(.jobs-page) .jobs-cta {
+          max-width: 1200px;
+          margin: 85px auto;
+          padding: 65px 24px;
+          text-align: center;
+          background: var(--white);
+          border: 1px solid var(--gold);
+        }
+
+        :where(.jobs-page) .jobs-cta p {
+          max-width: 520px;
+          margin: auto;
+        }
+
+        @keyframes rise {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (max-width: 850px) {
+          :where(.jobs-page) .jobs-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          :where(.jobs-page) .tips-inner {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          :where(.jobs-page) .jobs-hero {
+            min-height: 450px;
+            padding: 65px 20px;
+          }
+
+          :where(.jobs-page) .jobs-hero h1 {
+            font-size: 42px;
+            letter-spacing: -1px;
+          }
+
+          :where(.jobs-page) .jobs-intro {
+            padding: 65px 20px;
+          }
+
+          :where(.jobs-page) .jobs-section {
+            padding: 20px 18px 65px;
+          }
+
+          :where(.jobs-page) .section-heading {
+            display: block;
+          }
+
+          :where(.jobs-page) .jobs-grid {
+            grid-template-columns: 1fr;
+          }
+
+          :where(.jobs-page) .job-content p {
+            min-height: 0;
+          }
+
+          :where(.jobs-page) .career-tips {
+            padding: 65px 20px;
+          }
+
+          :where(.jobs-page) .jobs-cta {
+            margin: 60px 15px;
+            padding: 50px 18px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .jobs-page *,
+.jobs-page *::before,
+.jobs-page *::after {
+            animation: none !important;
+            transition: none !important;
+          }
+        }

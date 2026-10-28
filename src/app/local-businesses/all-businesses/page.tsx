@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ContactButton from "../../../components/ContactButton";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -401,13 +402,12 @@ export default function AllBusinessesPage() {
               </p>
             </div>
 
-            <Link
-              href="/list-your-business"
+            <ContactButton
               className="inline-flex w-fit items-center gap-3 rounded-full bg-[#FFFDF8] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#D9B783]"
             >
-              List your business
+              Contact
               <ChevronRight size={17} />
-            </Link>
+            </ContactButton>
           </div>
         </section>
 

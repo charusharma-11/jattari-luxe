@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ContactButton from "../../../components/ContactButton";
 
 import {
   ArrowLeft,
@@ -21,7 +22,6 @@ import {
   MoveUpRight,
   CheckCircle2,
   ExternalLink,
-  Send,
 } from "lucide-react";
 
 const developmentTypes = [
@@ -122,24 +122,6 @@ const buyingChecklist = [
   "Verify applicable approvals with the relevant authorities.",
   "Review the agreement carefully before making a commitment.",
 ];
-
-function EnquiryLink({
-  project,
-  className,
-}: {
-  project: string;
-  className: string;
-}) {
-  return (
-    <Link
-      href={`/contact?project=${encodeURIComponent(project)}`}
-      className={className}
-    >
-      Enquire Now
-      <Send size={16} />
-    </Link>
-  );
-}
 
 export default function FeaturedProjectsPage() {
   return (
@@ -474,10 +456,12 @@ export default function FeaturedProjectsPage() {
                       <ExternalLink size={16} />
                     </a>
 
-                    <EnquiryLink
-                      project={project.name}
+                    <ContactButton
                       className="inline-flex w-fit items-center gap-3 rounded-full border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-                    />
+                    >
+                      Contact
+                      <ArrowUpRight size={16} />
+                    </ContactButton>
                   </div>
                 </div>
               </article>
@@ -545,10 +529,12 @@ export default function FeaturedProjectsPage() {
                   </p>
                 </div>
 
-                <EnquiryLink
-                  project={project.name}
+                <ContactButton
                   className="inline-flex w-fit items-center justify-center gap-3 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40] md:justify-self-end"
-                />
+                >
+                  Contact
+                  <ArrowUpRight size={16} />
+                </ContactButton>
               </article>
             ))}
           </div>

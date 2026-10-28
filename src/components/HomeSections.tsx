@@ -1,4 +1,7 @@
 
+import Link from "next/link";
+import ContactButton from "./ContactButton";
+
 const imagePath = (name: string) => `/images/${name}`;
 
 const categories = [
@@ -40,15 +43,6 @@ const categories = [
   },
   {
     number: "05",
-    title: "Healthcare",
-    description:
-      "Explore local healthcare facilities, clinics and medical services.",
-    image: "healthcare-clinic.jpg",
-    href: "/healthcare",
-    label: "Find healthcare",
-  },
-  {
-    number: "06",
     title: "Events & News",
     description:
       "Stay connected with local events, community updates and announcements.",
@@ -58,7 +52,12 @@ const categories = [
   },
 ];
 
-const projects = [
+const projects: {
+  name: string;
+  type: string;
+  description: string;
+  image?: string;
+}[] = [
   {
     name: "Anugrah Homes",
     type: "Residential Project",
@@ -93,6 +92,30 @@ const projects = [
     description:
       "Contact our team for more information about Shiva Associates.",
     image: "hub-building-right.jpg",
+  },
+  {
+    name: "Shree Balaji Group",
+    type: "Residential Plots",
+    description:
+      "Promotes A1 City, a residential plotted development near the Yamuna Expressway and Noida International Airport.",
+  },
+  {
+    name: "Chhabra Properties",
+    type: "Real Estate Consultancy",
+    description:
+      "A property dealer and real estate consultant serving Noida, Greater Noida and Yamuna Expressway across residential and commercial properties, villas and plots.",
+  },
+  {
+    name: "Maxrow Properties",
+    type: "Property Advisory",
+    description:
+      "Provides property advisory across Noida, Greater Noida and Yamuna Expressway, including industrial, commercial, residential and investment properties.",
+  },
+  {
+    name: "Truevisory Realty",
+    type: "Real Estate Services",
+    description:
+      "Offers curated property options with buying guidance, investment advisory and legal assistance.",
   },
 ];
 
@@ -188,8 +211,8 @@ export default function HomeSections() {
           <p>
             Its local markets, surrounding agricultural landscape and
             close-knit community are part of everyday life in Jattari.
-            Jattari Luxe brings local businesses, education, healthcare
-            and property information together to help people explore
+            Jattari Luxe brings local businesses, education and
+            property information together to help people explore
             the town more easily.
           </p>
 
@@ -219,9 +242,9 @@ export default function HomeSections() {
             </li>
           </ul>
 
-          <a className="jl-text-link" href="/explore-jattari">
+          <Link className="jl-text-link" href="/explore-jattari">
             Explore Jattari <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -236,7 +259,7 @@ export default function HomeSections() {
 
           <div className="jl-category-grid">
             {categories.map((category) => (
-              <a
+              <Link
                 href={category.href}
                 className="jl-category-card"
                 key={category.title}
@@ -261,7 +284,7 @@ export default function HomeSections() {
                   <p>{category.description}</p>
                   <span className="jl-card-link">{category.label}</span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -277,24 +300,26 @@ export default function HomeSections() {
               description="Explore our featured projects and send an enquiry directly to the Jattari Luxe team."
             />
 
-            <a className="jl-outline-link" href="/real-estate">
+            <Link className="jl-outline-link" href="/real-estate">
               All properties <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           </div>
 
           <div className="jl-project-grid">
             {projects.map((project, index) => (
               <article className="jl-project-card" key={project.name}>
-                <div className="jl-project-image">
-                  <LocalImage
-                    name={project.image}
-                    alt={project.name}
-                  />
+                {project.image && (
+                  <div className="jl-project-image">
+                    <LocalImage
+                      name={project.image}
+                      alt={project.name}
+                    />
 
-                  <span className="jl-project-tag">
-                    {project.type}
-                  </span>
-                </div>
+                    <span className="jl-project-tag">
+                      {project.type}
+                    </span>
+                  </div>
+                )}
 
                 <div className="jl-project-copy">
                   <span className="jl-project-index">
@@ -304,12 +329,11 @@ export default function HomeSections() {
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
 
-                  <a
-                    className="jl-text-link"
-                    href={`/contact?project=${encodeURIComponent(project.name)}`}
+                  <ContactButton
+                    className="jl-text-link cursor-pointer border-0 bg-transparent p-0"
                   >
-                    Enquire Now <span aria-hidden="true">↗</span>
-                  </a>
+                    Contact <span aria-hidden="true">↗</span>
+                  </ContactButton>
                 </div>
               </article>
             ))}
@@ -339,14 +363,14 @@ export default function HomeSections() {
               and find useful information about businesses around Jattari.
             </p>
 
-            <a className="jl-dark-button" href="/local-businesses">
+            <Link className="jl-dark-button" href="/local-businesses">
               Browse all businesses <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           </div>
 
           <div className="jl-business-list">
             {businesses.map((business) => (
-              <a
+              <Link
                 className="jl-business-row"
                 href={business.href}
                 key={business.name}
@@ -369,19 +393,19 @@ export default function HomeSections() {
                 <span className="jl-business-arrow" aria-hidden="true">
                   ↗
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 05 — Education and healthcare */}
+      {/* 05 — Education */}
       <section className="jl-services-section">
         <div className="jl-container">
           <SectionHeading
-            eyebrow="ESSENTIAL LOCAL INFORMATION"
-            title="Find the services you need."
-            description="Quick introductions to important local services, with a direct path to more information."
+            eyebrow="LEARNING & OPPORTUNITY"
+            title="Explore local education."
+            description="Discover schools and learning opportunities around Jattari."
           />
 
           <div className="jl-service-grid">
@@ -402,32 +426,31 @@ export default function HomeSections() {
                   to learn more about local learning options.
                 </p>
 
-                <a className="jl-text-link" href="/education">
+                <Link className="jl-text-link" href="/education">
                   Explore education <span aria-hidden="true">↗</span>
-                </a>
+                </Link>
               </div>
             </article>
-
             <article className="jl-service-panel">
               <div className="jl-service-image">
                 <LocalImage
-                  name="healthcare-max.jpg"
-                  alt="Healthcare facilities"
+                  name="residential-building.jpg"
+                  alt="Residential property in Jattari"
                 />
               </div>
 
               <div className="jl-service-copy">
-                <span className="jl-eyebrow">CARE & WELLBEING</span>
-                <h3>Healthcare</h3>
+                <span className="jl-eyebrow">PROPERTY & LIVING</span>
+                <h3>Real Estate</h3>
 
                 <p>
-                  Discover healthcare facilities, clinics and local
-                  medical services through the healthcare directory.
+                  Discover residential projects, homes, plots and property
+                  opportunities around Jattari.
                 </p>
 
-                <a className="jl-text-link" href="/healthcare">
-                  Explore healthcare <span aria-hidden="true">↗</span>
-                </a>
+                <Link className="jl-text-link" href="/real-estate">
+                  Explore real estate <span aria-hidden="true">↗</span>
+                </Link>
               </div>
             </article>
           </div>
@@ -444,13 +467,13 @@ export default function HomeSections() {
               description="A preview of local events, community activities and updates."
             />
 
-            <a className="jl-outline-link" href="/events-news">
+            <Link className="jl-outline-link" href="/events-news">
               All updates <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           </div>
 
           <div className="jl-news-layout">
-            <a className="jl-news-feature" href="/events-news">
+            <Link className="jl-news-feature" href="/events-news">
               <LocalImage
                 name="events-crowd.jpg"
                 alt="Community gathering and local events"
@@ -469,10 +492,10 @@ export default function HomeSections() {
                   Explore community updates ↗
                 </span>
               </span>
-            </a>
+            </Link>
 
             <div className="jl-news-side">
-              <a className="jl-news-item" href="/events-news">
+              <Link className="jl-news-item" href="/events-news">
                 <LocalImage
                   name="events-festival.jpg"
                   alt="Local cultural celebrations"
@@ -485,9 +508,9 @@ export default function HomeSections() {
                     Explore events ↗
                   </span>
                 </div>
-              </a>
+              </Link>
 
-              <a className="jl-news-item" href="/events-news">
+              <Link className="jl-news-item" href="/events-news">
                 <LocalImage
                   name="events-news.jpg"
                   alt="Local community updates"
@@ -500,13 +523,13 @@ export default function HomeSections() {
                     Read updates ↗
                   </span>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 07 — List your business */}
+      {/* 07 — Contact CTA */}
       <section className="jl-listing-cta">
         <div className="jl-container jl-listing-inner">
           <div>
@@ -526,9 +549,9 @@ export default function HomeSections() {
             </p>
           </div>
 
-          <a className="jl-gold-button" href="/list-your-business">
-            List your business <span aria-hidden="true">↗</span>
-          </a>
+          <ContactButton className="jl-gold-button">
+            Contact <span aria-hidden="true">↗</span>
+          </ContactButton>
         </div>
       </section>
     </main>

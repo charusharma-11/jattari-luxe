@@ -1,13 +1,15 @@
 
+import Link from "next/link";
+import ContactButton from "./ContactButton";
+
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "Explore Jattari", href: "/explore-jattari" },
   { label: "Education", href: "/education" },
   { label: "Real Estate", href: "/real-estate" },
   { label: "Local Businesses", href: "/local-businesses" },
-  { label: "Healthcare", href: "/healthcare" },
   { label: "Events & News", href: "/events-news" },
-  { label: "List Your Business", href: "/list-your-business" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -16,14 +18,14 @@ export default function Footer() {
       <div className="jl-footer-main">
         {/* Brand */}
         <div className="jl-footer-brand">
-          <a href="/" className="jl-footer-logo">
+          <Link href="/" className="jl-footer-logo">
             <span className="jl-footer-logo-mark">JL</span>
 
             <span className="jl-footer-logo-text">
               <strong>Jattari Luxe</strong>
               <small>ELEVATED LIVING</small>
             </span>
-          </a>
+          </Link>
 
           <p>
             Your local guide to discovering Jattari, Uttar Pradesh —
@@ -38,9 +40,18 @@ export default function Footer() {
 
           <nav aria-label="Footer navigation">
             {footerLinks.map((link) => (
-              <a href={link.href} key={link.href}>
-                {link.label}
-              </a>
+              link.label === "Contact" ? (
+                <ContactButton
+                  className="jl-footer-contact-button"
+                  key={link.href}
+                >
+                  {link.label}
+                </ContactButton>
+              ) : (
+                <Link href={link.href} key={link.href}>
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>
@@ -55,7 +66,7 @@ export default function Footer() {
             through reliable sources before making decisions.
           </p>
 
-          <a href="/contact">Contact Us ↗</a>
+          <Link href="/contact">Contact Us ↗</Link>
         </div>
       </div>
 

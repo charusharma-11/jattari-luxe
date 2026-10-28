@@ -28,6 +28,7 @@ import {
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ContactButton from "../../../components/ContactButton";
 
 const businesses = [
   {
@@ -79,7 +80,7 @@ const businesses = [
     name: "Lalit Computer Solution Jattari",
     category: "Computers, Printers & Repairs",
     address:
-      "Opposite Paliwal Hospital, Kua Wali Gali, Main Road, Jattari, Uttar Pradesh 202137",
+      "Kua Wali Gali, Main Road, Jattari, Uttar Pradesh 202137",
     phone: "",
     icon: Laptop,
     description:
@@ -89,7 +90,7 @@ const businesses = [
       "Printer support",
       "Ink and cartridge refilling",
     ],
-    note: "Opposite Paliwal Hospital",
+    note: "Kua Wali Gali",
   },
   {
     id: "divya",
@@ -726,13 +727,12 @@ export default function ElectronicsAppliancesPage() {
             </p>
           </div>
 
-          <Link
-            href="/list-your-business"
+          <ContactButton
             className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#173F40] transition hover:-translate-y-1 hover:bg-[#E8D2A7]"
           >
-            List your business
+            Contact
             <ArrowRight size={17} />
-          </Link>
+          </ContactButton>
         </div>
       </section>
 

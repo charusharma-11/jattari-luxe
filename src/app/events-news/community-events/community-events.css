@@ -1,0 +1,451 @@
+.community-page {
+          --cp-paper: #fffdf8;
+          --cp-cream: #fff5e1;
+          --cp-teal: #103f40;
+          --cp-gold: #d9b783;
+          background: var(--cp-paper);
+          color: var(--cp-teal);
+          padding: 0 4%;
+        }
+
+        .community-page * {
+          box-sizing: border-box;
+        }
+
+        .community-page a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .community-page img {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        :where(.community-page) .community-hero {
+          display: grid;
+          grid-template-columns: 1fr 0.9fr;
+          align-items: center;
+          gap: 5%;
+          padding: 65px 2% 70px;
+          background:
+            radial-gradient(
+              ellipse at 10% 0%,
+              #e8eee5 0%,
+              transparent 48%
+            ),
+            var(--cp-cream);
+          border-bottom: 1px solid var(--cp-gold);
+        }
+
+        :where(.community-page) .hero-content {
+          padding: 10px 0;
+        }
+
+        :where(.community-page) .eyebrow {
+          color: #a47e49;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2px;
+        }
+
+        :where(.community-page) .hero-content h1 {
+          font: 400 clamp(42px, 5.5vw, 72px)/1.06 Georgia, serif;
+          letter-spacing: -2px;
+          margin: 22px 0;
+        }
+
+        :where(.community-page) .hero-content h1 span {
+          color: #8b744f;
+          font-style: italic;
+        }
+
+        :where(.community-page) .hero-content > p {
+          max-width: 480px;
+          color: #596d64;
+          font-size: 14px;
+          line-height: 1.9;
+        }
+
+        :where(.community-page) .hero-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 24px;
+          background: var(--cp-teal);
+          color: white !important;
+          padding: 15px 19px;
+          margin-top: 18px;
+          font-size: 11px;
+          transition: background 0.25s, transform 0.25s;
+        }
+
+        :where(.community-page) .hero-button:hover {
+          background: #205a59;
+          transform: translateY(-3px);
+        }
+
+        :where(.community-page) .hero-image {
+          position: relative;
+          min-width: 0;
+        }
+
+        :where(.community-page) .hero-image > img {
+          height: 390px;
+          object-fit: cover;
+        }
+
+        :where(.community-page) .image-caption {
+          position: absolute;
+          left: 14px;
+          right: 14px;
+          bottom: 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 18px;
+          color: white;
+          background: rgba(16, 63, 64, 0.88);
+        }
+
+        :where(.community-page) .image-caption span {
+          color: #f1d6a6;
+          font-size: 9px;
+          letter-spacing: 1.5px;
+        }
+
+        :where(.community-page) .image-caption strong {
+          font: 400 21px Georgia, serif;
+        }
+
+        :where(.community-page) .community-intro {
+          padding: 75px 2%;
+          border-bottom: 1px solid #e5d8be;
+        }
+
+        :where(.community-page) .intro-label {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          color: #a47e49;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+        }
+
+        :where(.community-page) .intro-label span:first-child {
+          display: grid;
+          place-items: center;
+          width: 35px;
+          height: 35px;
+          border: 1px solid var(--cp-gold);
+          border-radius: 50%;
+          font-size: 11px;
+        }
+
+        :where(.community-page) .intro-content {
+          display: grid;
+          grid-template-columns: 1fr 0.8fr;
+          gap: 8%;
+          margin-top: 28px;
+        }
+
+        :where(.community-page) .intro-content h2,
+:where(.community-page) .section-heading h2,
+:where(.community-page) .related-links h2 {
+          font: 400 clamp(32px, 4vw, 48px)/1.15 Georgia, serif;
+          letter-spacing: -1px;
+          margin: 0;
+        }
+
+        :where(.community-page) .intro-content h2 em {
+          color: #9b8055;
+          font-weight: 400;
+        }
+
+        :where(.community-page) .intro-text p {
+          margin: 0 0 16px;
+          color: #596d64;
+          font-size: 13px;
+          line-height: 1.95;
+        }
+
+        :where(.community-page) .text-link {
+          display: inline-block;
+          margin-top: 7px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid var(--cp-gold);
+          font-size: 11px;
+          font-weight: 700;
+        }
+
+        :where(.community-page) .community-stories {
+          padding: 75px 2%;
+        }
+
+        :where(.community-page) .section-heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          gap: 25px;
+          margin-bottom: 32px;
+        }
+
+        :where(.community-page) .section-heading h2 {
+          margin-top: 13px;
+        }
+
+        :where(.community-page) .section-heading > p {
+          max-width: 330px;
+          color: #596d64;
+          font-size: 12px;
+          line-height: 1.8;
+        }
+
+        :where(.community-page) .stories-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 32px 22px;
+        }
+
+        :where(.community-page) .story-card {
+          min-width: 0;
+          border-bottom: 1px solid var(--cp-gold);
+          padding-bottom: 20px;
+        }
+
+        :where(.community-page) .story-image {
+          position: relative;
+          overflow: hidden;
+          background: var(--cp-cream);
+        }
+
+        :where(.community-page) .story-image img {
+          height: 225px;
+          transition: transform 0.45s;
+        }
+
+        :where(.community-page) .story-card:hover .story-image img {
+          transform: scale(1.045);
+        }
+
+        :where(.community-page) .story-number {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          display: grid;
+          place-items: center;
+          width: 36px;
+          height: 36px;
+          background: var(--cp-cream);
+          color: var(--cp-teal);
+          font: 16px Georgia, serif;
+        }
+
+        :where(.community-page) .story-content {
+          padding-top: 20px;
+        }
+
+        :where(.community-page) .story-category {
+          color: #a47e49;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+        }
+
+        :where(.community-page) .story-content h3 {
+          font: 400 25px/1.2 Georgia, serif;
+          margin: 12px 0;
+        }
+
+        :where(.community-page) .story-content p {
+          color: #596d64;
+          font-size: 12px;
+          line-height: 1.85;
+          margin-bottom: 18px;
+        }
+
+        :where(.community-page) .story-label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 12px;
+          border-top: 1px solid #e9e0d0;
+          font-size: 10px;
+          font-weight: 700;
+        }
+
+        :where(.community-page) .story-label span {
+          color: #a47e49;
+        }
+
+        :where(.community-page) .event-note {
+          display: grid;
+          grid-template-columns: 50px 1fr auto;
+          align-items: center;
+          gap: 22px;
+          padding: 32px;
+          background: var(--cp-cream);
+          border-top: 1px solid var(--cp-gold);
+          border-bottom: 1px solid var(--cp-gold);
+        }
+
+        :where(.community-page) .note-symbol {
+          display: grid;
+          place-items: center;
+          width: 45px;
+          height: 45px;
+          border: 1px solid var(--cp-gold);
+          border-radius: 50%;
+          font-size: 23px;
+        }
+
+        :where(.community-page) .event-note h2 {
+          font: 400 27px Georgia, serif;
+          margin: 10px 0;
+        }
+
+        :where(.community-page) .event-note p {
+          max-width: 650px;
+          color: #596d64;
+          font-size: 12px;
+          line-height: 1.8;
+          margin: 0;
+        }
+
+        :where(.community-page) .note-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 18px;
+          padding: 13px 16px;
+          background: var(--cp-teal);
+          color: white !important;
+          font-size: 10px;
+          white-space: nowrap;
+        }
+
+        :where(.community-page) .related-links {
+          padding: 75px 2%;
+        }
+
+        :where(.community-page) .related-links h2 {
+          margin-top: 12px;
+        }
+
+        :where(.community-page) .related-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+          margin-top: 30px;
+        }
+
+        :where(.community-page) .related-grid a {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          padding: 22px;
+          background: var(--cp-cream);
+          border: 1px solid #e8d9bd;
+          transition: background 0.25s, transform 0.25s;
+        }
+
+        :where(.community-page) .related-grid a:hover {
+          background: #e8eee5;
+          transform: translateY(-3px);
+        }
+
+        :where(.community-page) .related-grid a > span {
+          color: #a47e49;
+          font-size: 9px;
+          letter-spacing: 1.5px;
+        }
+
+        :where(.community-page) .related-grid strong {
+          font: 400 21px Georgia, serif;
+        }
+
+        @media (max-width: 900px) {
+          :where(.community-page) .community-hero {
+            grid-template-columns: 1fr 0.85fr;
+            gap: 25px;
+            padding: 45px 1%;
+          }
+
+          :where(.community-page) .hero-image > img {
+            height: 330px;
+          }
+
+          :where(.community-page) .stories-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          :where(.community-page) .event-note {
+            grid-template-columns: 45px 1fr;
+          }
+
+          :where(.community-page) .note-link {
+            grid-column: 2;
+            justify-self: start;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .community-page {
+            padding: 0 4%;
+          }
+
+          :where(.community-page) .community-hero {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            padding: 40px 0;
+          }
+
+          :where(.community-page) .hero-content h1 {
+            font-size: 43px;
+            letter-spacing: -1.5px;
+          }
+
+          :where(.community-page) .hero-image > img {
+            height: 260px;
+          }
+
+          :where(.community-page) .community-intro,
+:where(.community-page) .community-stories,
+:where(.community-page) .related-links {
+            padding: 48px 0;
+          }
+
+          :where(.community-page) .intro-content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          :where(.community-page) .section-heading {
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          :where(.community-page) .stories-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+          }
+
+          :where(.community-page) .story-image img {
+            height: 230px;
+          }
+
+          :where(.community-page) .event-note {
+            grid-template-columns: 1fr;
+            padding: 23px;
+            gap: 15px;
+          }
+
+          :where(.community-page) .note-link {
+            grid-column: auto;
+          }
+
+          :where(.community-page) .related-grid {
+            grid-template-columns: 1fr;
+          }
+        }

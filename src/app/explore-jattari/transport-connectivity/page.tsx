@@ -141,7 +141,7 @@ export default function TransportConnectivityPage() {
                 Roads and local transport play an important role in
                 connecting Jattari with nearby communities. Residents and
                 visitors can plan journeys for education, work, shopping,
-                healthcare and regional travel.
+                daily travel and regional connections.
               </p>
 
               <p className="mt-5 leading-8 text-gray-600">

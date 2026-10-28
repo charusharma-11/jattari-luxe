@@ -28,7 +28,7 @@ const propertyTypes = [
     title: "Retail Shops",
     icon: Store,
     description:
-      "Explore shop spaces for daily-needs stores, convenience retail, salons, pharmacies and other neighbourhood services.",
+      "Explore shop spaces for daily-needs stores, convenience retail, salons, specialty retailers and other neighbourhood services.",
     note: "Verify frontage, footfall and permitted use.",
   },
   {

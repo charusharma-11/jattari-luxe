@@ -18,6 +18,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Contact form email delivery
+
+The contact form sends enquiries through [Resend](https://resend.com/). Copy `contact.env.example` to `.env.local` and set:
+
+- `RESEND_API_KEY` to your Resend API key.
+- `CONTACT_TO_EMAIL` to the inbox that should receive enquiries.
+- `CONTACT_FROM_EMAIL` to a sender address verified with Resend, for example `Jattari Luxe <contact@your-verified-domain.com>`.
+
+Restart the Next.js server after setting these values. The contact API returns a configuration error and does not report success until Resend confirms delivery.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

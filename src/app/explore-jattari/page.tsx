@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -353,12 +354,12 @@ export default function ExploreJattariPage() {
                 facilities and admissions directly with each institution.
               </p>
 
-              <a
+              <Link
                 href="/education"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white hover:bg-[#103F40]"
               >
                 Explore Education Guide →
-              </a>
+              </Link>
             </div>
 
             <div className="rounded-2xl border border-[#E8E2D8] bg-white p-6 sm:p-8">
@@ -418,12 +419,12 @@ export default function ExploreJattariPage() {
                 categories and discover businesses serving the community.
               </p>
 
-              <a
+              <Link
                 href="/local-businesses"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#164E52] underline decoration-[#D9B783] underline-offset-4"
               >
                 Explore Local Businesses →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -482,12 +483,12 @@ export default function ExploreJattariPage() {
               navigation before travelling.
             </p>
 
-            <a
+            <Link
               href="/explore-jattari/transport-connectivity"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white hover:bg-[#103F40]"
             >
               Explore Connectivity →
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -511,12 +512,12 @@ export default function ExploreJattariPage() {
                 decisions.
               </p>
 
-              <a
+              <Link
                 href="/real-estate"
                 className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#D9B783] px-7 py-3.5 text-sm font-bold text-[#164E52] hover:bg-[#E8D2AC]"
               >
                 Explore Residential Developments →
-              </a>
+              </Link>
             </div>
 
             <div className="rounded-2xl border border-white/20 bg-white/[0.06] p-6 sm:p-8">
@@ -544,12 +545,12 @@ export default function ExploreJattariPage() {
                 and check project details before making a decision.
               </p>
 
-              <a
+              <Link
                 href="/real-estate"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#E4C99B] hover:text-white"
               >
                 View the Real Estate Guide →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -575,7 +576,7 @@ export default function ExploreJattariPage() {
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {categories.map((category) => (
-                <a
+                <Link
                   key={category.title}
                   href={category.href}
                   className="group overflow-hidden rounded-2xl border border-[#E8E2D8] bg-white transition hover:-translate-y-1 hover:shadow-lg"
@@ -618,7 +619,7 @@ export default function ExploreJattariPage() {
                       Explore More →
                     </span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

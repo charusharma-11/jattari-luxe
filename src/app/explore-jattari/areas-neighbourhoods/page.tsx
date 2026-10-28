@@ -18,7 +18,7 @@ const nearbyCities = [
     name: "Aligarh",
     region: "Uttar Pradesh",
     description:
-      "The district's major urban centre, known for its educational institutions, markets, healthcare services and historic lock industry.",
+      "The district's major urban centre, known for its educational institutions, markets and historic lock industry.",
     map: "Aligarh Uttar Pradesh",
   },
   {
@@ -76,18 +76,12 @@ const localFeatures = [
   },
   {
     number: "04",
-    title: "Healthcare",
-    description:
-      "Check the location and availability of medical facilities, clinics and pharmacies for daily needs.",
-  },
-  {
-    number: "05",
     title: "Road Connectivity",
     description:
       "Jattari is situated on the Aligarh–Palwal road corridor, connecting it with surrounding towns and routes.",
   },
   {
-    number: "06",
+    number: "05",
     title: "Culture & Community",
     description:
       "Religious places, local customs and community spaces contribute to the character of the town.",

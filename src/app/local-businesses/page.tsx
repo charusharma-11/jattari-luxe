@@ -24,6 +24,7 @@ import {
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ContactButton from "../../components/ContactButton";
 
 const categories = [
   {
@@ -191,13 +192,12 @@ export default function LocalBusinessesPage() {
                     />
                   </a>
 
-                  <Link
-                    href="/list-your-business"
+                  <ContactButton
                     className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/[0.08] px-6 py-4 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/[0.15] sm:px-7"
                   >
-                    List your business
+                    Contact
                     <ArrowUpRight size={17} />
-                  </Link>
+                  </ContactButton>
                 </div>
 
                 <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/70">
@@ -602,16 +602,15 @@ export default function LocalBusinessesPage() {
               </p>
             </div>
 
-            <Link
-              href="/list-your-business"
+            <ContactButton
               className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#164E52] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40]"
             >
-              List your business
+              Contact
               <ArrowRight
                 size={17}
                 className="transition-transform group-hover:translate-x-1"
               />
-            </Link>
+            </ContactButton>
           </div>
         </div>
       </section>

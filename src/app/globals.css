@@ -88,7 +88,10 @@ body {
 .jl-check { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid #dce3d7; border-radius: 50%; color: #b89552; font-size: 12px; }
 
 .jl-categories-section, .jl-news-section { background: #f5f4ed; }
-.jl-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.jl-category-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; }
+.jl-category-card { grid-column: span 2; }
+.jl-category-card:nth-last-child(2) { grid-column: 2 / span 2; }
+.jl-category-card:last-child { grid-column: 4 / span 2; }
 .jl-category-card { min-width: 0; overflow: hidden; border: 1px solid #e9e6dc; background: var(--jl-cream); color: inherit; text-decoration: none; transition: transform 220ms ease, box-shadow 220ms ease; }
 .jl-category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgb(22 78 82 / 9%); }
 .jl-category-image { position: relative; height: 215px; overflow: hidden; background: var(--jl-sage); }
@@ -140,6 +143,7 @@ body {
 .jl-business-divider { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: #cfd8cc; }
 
 .jl-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.jl-services-section { margin-bottom: -32px; }
 .jl-service-panel { display: grid; grid-template-columns: .9fr 1fr; min-height: 290px; border: 1px solid #e8e6dc; background: white; }
 .jl-service-image { min-height: 290px; overflow: hidden; background: var(--jl-sage); }
 .jl-service-copy { align-self: center; padding: 23px; }
@@ -187,7 +191,10 @@ body {
   .jl-home-sections section { padding-block: 66px; }
   .jl-discover { gap: 35px; }
   .jl-discover-image { height: 390px; }
-  .jl-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jl-category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .jl-category-card { grid-column: span 2; }
+  .jl-category-card:nth-last-child(2) { grid-column: auto; }
+  .jl-category-card:last-child { grid-column: 2 / span 2; }
   .jl-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .jl-business-layout { grid-template-columns: 1fr; gap: 34px; }
   .jl-service-grid { grid-template-columns: 1fr; }
@@ -252,8 +259,9 @@ body {
 .jl-footer-brand > p, .jl-footer-information > p { margin: 15px 0 0; color: #d0ddd7; font-size: 13px; line-height: 1.85; }
 .jl-footer-explore h3, .jl-footer-information h3 { margin: 5px 0 19px; color: #fffdf7; font-size: 14px; font-weight: 600; }
 .jl-footer-explore nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 26px; row-gap: 15px; }
-.jl-footer-explore nav a, .jl-footer-information > a { color: #d0ddd7; font-size: 12px; line-height: 1.6; text-decoration: none; transition: color .2s ease; }
-.jl-footer-explore nav a:hover, .jl-footer-information > a:hover { color: #e5c895; }
+.jl-footer-explore nav a, .jl-footer-explore nav button, .jl-footer-information > a { color: #d0ddd7; font-size: 12px; line-height: 1.6; text-decoration: none; transition: color .2s ease; }
+.jl-footer-explore nav button { padding: 0; border: 0; background: none; font-family: inherit; font-weight: inherit; text-align: left; cursor: pointer; }
+.jl-footer-explore nav a:hover, .jl-footer-explore nav button:hover, .jl-footer-information > a:hover { color: #e5c895; }
 .jl-footer-information > a { display: inline-block; margin-top: 17px; color: #e5c895; font-weight: 600; }
 .jl-footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; max-width: 1300px; margin: 27px auto 0; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .16); }
 .jl-footer-bottom p, .jl-footer-bottom span { margin: 0; color: #cbd9d3; font-size: 11px; line-height: 1.6; }

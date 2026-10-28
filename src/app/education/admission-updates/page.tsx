@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ContactButton from "../../../components/ContactButton";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -575,13 +576,12 @@ export default function AdmissionUpdatesPage() {
               admission notice? Help make useful information easier to discover.
             </p>
 
-            <Link
-              href="/list-your-business"
+            <ContactButton
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#FFFDF8] px-6 py-3.5 text-sm font-semibold text-[#164E52] transition duration-300 hover:-translate-y-1 hover:bg-[#D9B783]"
             >
-              Share an education listing
+              Contact
               <ArrowUpRight size={17} />
-            </Link>
+            </ContactButton>
           </div>
         </div>
       </section>
