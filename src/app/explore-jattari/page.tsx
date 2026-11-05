@@ -1,7 +1,6 @@
 
-import Link from "next/link";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+    import Navbar from "../../components/Navbar";
+    import Footer from "../../components/Footer";
 
 const categories = [
   {
@@ -99,7 +98,7 @@ export default function ExploreJattariPage() {
     <>
       <Navbar />
 
-      <main className="overflow-hidden bg-[#FFFDF8] text-[#29443A]">
+      <main className="jl-explore-content overflow-hidden bg-[#FFFDF8] text-[#29443A]">
         {/* HERO */}
         <section className="relative flex min-h-[540px] items-center sm:min-h-[620px]">
           <img
@@ -112,11 +111,7 @@ export default function ExploreJattariPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#103F40]/95 via-[#103F40]/75 to-[#103F40]/20" />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-5 py-20 sm:px-8 lg:px-12">
-            <p className="text-xs font-semibold uppercase tracking-[3px] text-[#E4C99B]">
-              Jattari · Aligarh · Uttar Pradesh
-            </p>
-
-            <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl jl-no-preheading">
               Discover Jattari.
               <span className="mt-2 block font-normal italic text-[#E4C99B]">
                 Know the place. Feel the connection.
@@ -173,11 +168,7 @@ export default function ExploreJattariPage() {
         >
           <div className="mx-auto grid max-w-[1200px] items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                About Jattari
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#164E52] sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#164E52] sm:text-4xl lg:text-5xl jl-no-preheading">
                 A town connected to its region and its people.
               </h2>
 
@@ -237,11 +228,7 @@ export default function ExploreJattariPage() {
         >
           <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Location & Geography
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
                 Finding Jattari on the map
               </h2>
 
@@ -290,11 +277,7 @@ export default function ExploreJattariPage() {
         {/* DEMOGRAPHICS */}
         <section className="px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto max-w-[1200px]">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              People & Demographics
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
               A snapshot from the 2011 Census
             </h2>
 
@@ -333,11 +316,7 @@ export default function ExploreJattariPage() {
         <section className="bg-[#F3F3EC] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Education & Learning
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
                 Learning opportunities in the town
               </h2>
 
@@ -354,12 +333,12 @@ export default function ExploreJattariPage() {
                 facilities and admissions directly with each institution.
               </p>
 
-              <Link
+              <a
                 href="/education"
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white hover:bg-[#103F40]"
               >
                 Explore Education Guide →
-              </Link>
+              </a>
             </div>
 
             <div className="rounded-2xl border border-[#E8E2D8] bg-white p-6 sm:p-8">
@@ -399,11 +378,7 @@ export default function ExploreJattariPage() {
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Markets & Community Life
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
                 Everyday life is part of a town&apos;s identity.
               </h2>
 
@@ -419,12 +394,12 @@ export default function ExploreJattariPage() {
                 categories and discover businesses serving the community.
               </p>
 
-              <Link
+              <a
                 href="/local-businesses"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#164E52] underline decoration-[#D9B783] underline-offset-4"
               >
                 Explore Local Businesses →
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -432,11 +407,7 @@ export default function ExploreJattariPage() {
         {/* NEARBY PLACES */}
         <section className="bg-[#F3F3EC] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto max-w-[1200px]">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              Regional Connections
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
               Places around Jattari
             </h2>
 
@@ -467,11 +438,7 @@ export default function ExploreJattariPage() {
         {/* CONNECTIVITY */}
         <section className="px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto max-w-[1200px] rounded-2xl border border-[#E8E2D8] bg-white p-7 sm:p-10 lg:p-12">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              Transport & Connectivity
-            </p>
-
-            <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-[#164E52] sm:text-4xl">
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
               Understand your routes before you travel.
             </h2>
 
@@ -483,12 +450,12 @@ export default function ExploreJattariPage() {
               navigation before travelling.
             </p>
 
-            <Link
+            <a
               href="/explore-jattari/transport-connectivity"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white hover:bg-[#103F40]"
             >
               Explore Connectivity →
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -496,11 +463,7 @@ export default function ExploreJattariPage() {
         <section className="bg-[#164E52] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#D9B783]">
-                Exploring Places to Call Home
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl jl-no-preheading">
                 Get to know an area before choosing where to live.
               </h2>
 
@@ -512,12 +475,12 @@ export default function ExploreJattariPage() {
                 decisions.
               </p>
 
-              <Link
+              <a
                 href="/real-estate"
                 className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#D9B783] px-7 py-3.5 text-sm font-bold text-[#164E52] hover:bg-[#E8D2AC]"
               >
                 Explore Residential Developments →
-              </Link>
+              </a>
             </div>
 
             <div className="rounded-2xl border border-white/20 bg-white/[0.06] p-6 sm:p-8">
@@ -545,12 +508,12 @@ export default function ExploreJattariPage() {
                 and check project details before making a decision.
               </p>
 
-              <Link
+              <a
                 href="/real-estate"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#E4C99B] hover:text-white"
               >
                 View the Real Estate Guide →
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -561,11 +524,7 @@ export default function ExploreJattariPage() {
           className="px-5 py-16 sm:px-8 sm:py-20 lg:px-12"
         >
           <div className="mx-auto max-w-[1200px]">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              Continue Exploring
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold text-[#164E52] sm:text-4xl jl-no-preheading">
               Discover more of Jattari.
             </h2>
 
@@ -576,7 +535,7 @@ export default function ExploreJattariPage() {
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {categories.map((category) => (
-                <Link
+                <a
                   key={category.title}
                   href={category.href}
                   className="group overflow-hidden rounded-2xl border border-[#E8E2D8] bg-white transition hover:-translate-y-1 hover:shadow-lg"
@@ -619,7 +578,7 @@ export default function ExploreJattariPage() {
                       Explore More →
                     </span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

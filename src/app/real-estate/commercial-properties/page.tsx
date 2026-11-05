@@ -13,7 +13,6 @@ import {
   Warehouse,
   ShieldCheck,
   ExternalLink,
-  TrendingUp,
   Ruler,
   Compass,
   CheckCircle2,
@@ -28,7 +27,7 @@ const propertyTypes = [
     title: "Retail Shops",
     icon: Store,
     description:
-      "Explore shop spaces for daily-needs stores, convenience retail, salons, specialty retailers and other neighbourhood services.",
+      "Explore shop spaces for daily-needs stores, convenience retail, salons, pharmacies and other neighbourhood services.",
     note: "Verify frontage, footfall and permitted use.",
   },
   {
@@ -122,7 +121,7 @@ const dueDiligence = [
 
 export default function CommercialPropertiesPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       {/* NAVBAR */}
       <Navbar />
 
@@ -142,12 +141,7 @@ export default function CommercialPropertiesPage() {
 
         <div className="relative mx-auto w-full max-w-7xl px-5 py-28 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              <Building2 size={15} className="text-[#D9B783]" />
-              Commercial Real Estate · Jattari
-            </div>
-
-            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl jl-no-preheading">
               Space for
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -193,32 +187,13 @@ export default function CommercialPropertiesPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 hidden w-[340px] border-l border-t border-white/20 bg-[#103F40]/70 p-8 text-white backdrop-blur-xl md:block lg:w-[390px]">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#D9B783]">
-            A smarter property search
-          </p>
-          <p className="mt-3 text-2xl font-medium leading-snug">
-            Location.
-            <br />
-            Business use.
-            <br />
-            Documentation.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-white/70">
-            Start with the practical details before committing to a property.
-          </p>
-        </div>
       </section>
 
       {/* INTRODUCTION */}
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Find your business space
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               The right space
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -255,16 +230,12 @@ export default function CommercialPropertiesPage() {
       {/* PROPERTY TYPES */}
       <section
         id="property-types"
-        className="bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Commercial property guide
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Different spaces.
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -317,15 +288,11 @@ export default function CommercialPropertiesPage() {
       {/* ANUGRAH + SKYLINE */}
       <section
         id="featured-projects"
-        className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Featured developments
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Explore the projects.
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -434,11 +401,7 @@ export default function CommercialPropertiesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Location matters
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Find your
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -498,11 +461,7 @@ export default function CommercialPropertiesPage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Before you invest or lease
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Check the details.
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -511,7 +470,7 @@ export default function CommercialPropertiesPage() {
             </h2>
 
             <p className="mt-5 max-w-md text-base leading-8 text-[#687B78]">
-              A property's location is only one part of the decision. Check
+              A property&apos;s location is only one part of the decision. Check
               that the premises are suitable for your intended business
               before paying a booking amount or signing a lease.
             </p>
@@ -540,42 +499,6 @@ export default function CommercialPropertiesPage() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#103F40] px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-          <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute -right-5 -top-12 h-52 w-52 rounded-full border border-[#D9B783]/30" />
-
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D9B783]">
-                Your next business move
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-5xl">
-                Looking for a shop, office or commercial plot?
-              </h2>
-
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Tell us the property type and preferred location so you can
-                organise your search around Jattari and nearby areas.
-              </p>
-            </div>
-
-            <Link
-              href={`/contact?interest=${encodeURIComponent("Commercial Property")}`}
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#173F40] transition hover:-translate-y-1 hover:bg-[#E8D2A7]"
-            >
-              Send an enquiry
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
           </div>
         </div>
       </section>

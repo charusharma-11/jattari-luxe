@@ -2,6 +2,7 @@
 "use client";
 
 import "./jobs-opportunities.css";
+import "../events-news-hero.css";
 import { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -60,10 +61,9 @@ export default function JobsOpportunitiesPage() {
       <Navbar />
 
       <main className="jobs-page">
-        <section className="jobs-hero">
-          {/* Add your hero background image in CSS */}
+        <section className="jobs-hero jl-events-cover">
+          <div className="jl-events-cover__media" aria-hidden="true" />
           <div className="hero-content">
-            <span>JATTARI · CAREERS · OPPORTUNITIES</span>
             <h1>
               Discover Opportunities.
               <br />
@@ -80,8 +80,7 @@ export default function JobsOpportunitiesPage() {
         </section>
 
         <section className="jobs-intro">
-          <span className="label">YOUR CAREER JOURNEY</span>
-          <h2>
+          <h2 className="jl-no-preheading">
             Find your path.
             <br />
             <em>Grow with confidence.</em>
@@ -96,8 +95,7 @@ export default function JobsOpportunitiesPage() {
         <section className="jobs-section" id="job-categories">
           <div className="section-heading">
             <div>
-              <span className="label">EXPLORE CAREERS</span>
-              <h2>Career <em>Categories</em></h2>
+              <h2 className="jl-no-preheading">Career <em>Categories</em></h2>
             </div>
             <p>Search for a field that matches your interests and skills.</p>
           </div>
@@ -137,8 +135,7 @@ export default function JobsOpportunitiesPage() {
         <section className="career-tips">
           <div className="tips-inner">
             <div>
-              <span className="label">CAREER GUIDANCE</span>
-              <h2>
+              <h2 className="jl-no-preheading">
                 Take the next step
                 <br />
                 <em>with confidence.</em>
@@ -168,26 +165,6 @@ export default function JobsOpportunitiesPage() {
           </div>
         </section>
 
-        <section className="jobs-cta">
-          <span className="label">JATTARI LUXE · CAREER RESOURCES</span>
-          <h2>
-            Your future starts
-            <br />
-            <em>with one step.</em>
-          </h2>
-          <p>
-            Keep learning, prepare your resume and explore
-            trusted job resources.
-          </p>
-          <a
-            href="https://www.linkedin.com/jobs/"
-            target="_blank"
-            rel="noreferrer"
-            className="jobs-btn"
-          >
-            Search Jobs ↗
-          </a>
-        </section>
       </main>
 
       <Footer />

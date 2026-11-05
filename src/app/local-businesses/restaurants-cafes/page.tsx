@@ -2,12 +2,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import {
   ArrowDownRight,
-  ArrowUpRight,
   Coffee,
   MapPin,
   Utensils,
@@ -153,14 +151,11 @@ export default function RestaurantsCafesPage() {
         {/* FEATURED PLACE */}
         <section
           id="food-directory"
-          className="mx-auto max-w-[1440px] px-6 py-10 md:px-12 md:py-14"
+          className="scroll-mt-24 mx-auto max-w-[1440px] px-6 py-10 md:px-12 md:py-14"
         >
           <div className="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                Local favourites to explore
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-[-0.045em] md:text-5xl">
+              <h2 className="mt-2 text-3xl font-semibold tracking-[-0.045em] md:text-5xl jl-no-preheading">
                 Around the table
               </h2>
             </div>
@@ -169,7 +164,7 @@ export default function RestaurantsCafesPage() {
             </p>
           </div>
 
-          {restaurants.map((place, index) => {
+          {restaurants.map((place) => {
             const Icon = place.icon;
 
             return (
@@ -221,27 +216,6 @@ export default function RestaurantsCafesPage() {
           </div>
         </section>
 
-        {/* COMPACT CLOSING BANNER */}
-        <section className="bg-[#164E52]">
-          <div className="mx-auto flex max-w-[1320px] flex-col gap-5 px-6 py-9 md:flex-row md:items-center md:justify-between md:px-12">
-            <div>
-              <h2 className="text-2xl font-medium text-white md:text-3xl">
-                Explore more of your neighbourhood.
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-white/75">
-                Find more local shops and everyday services around Jattari.
-              </p>
-            </div>
-
-            <Link
-              href="/local-businesses"
-              className="inline-flex w-fit items-center gap-3 rounded-full bg-[#FFFDF8] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#D9B783]"
-            >
-              All local businesses
-              <ArrowUpRight size={17} />
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />

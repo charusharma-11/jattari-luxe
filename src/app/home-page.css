@@ -50,25 +50,8 @@
           padding-bottom: 6px;
         }
 
-        :where(.jl-home) .jl-eyebrow {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 10px;
-          font-size: 11px;
-          font-weight: 800;
-          letter-spacing: 2px;
-        }
-
-        :where(.jl-home) .jl-eyebrow::after {
-          content: "";
-          width: 36px;
-          height: 1px;
-          background: var(--gold);
-        }
-
         :where(.jl-home) .jl-heading {
-          margin-top: 26px;
+          margin-top: 0;
           font-family: Georgia, "Times New Roman", serif;
           font-size: clamp(48px, 4.2vw, 72px);
           font-weight: 700;
@@ -262,7 +245,7 @@
         }
 
         :where(.jl-home) .jl-card-position.education {
-          right: 0;
+          right: -1%;
           top: 36%;
           animation-delay: -1.5s;
         }
@@ -274,13 +257,13 @@
         }
 
         :where(.jl-home) .jl-card-position.estate {
-          left: 8%;
+          left: 7.5%;
           bottom: 1%;
           animation-delay: -3.5s;
         }
 
         :where(.jl-home) .jl-card-position.events {
-          right: 4%;
+          right: -1%;
           bottom: 1%;
           animation-delay: -2s;
         }
@@ -308,6 +291,12 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        :where(.jl-home) .jl-photo-strip img {
+          object-fit: contain;
+          object-position: center;
+          background: white;
         }
 
         :where(.jl-home) .jl-category {
@@ -398,18 +387,44 @@
           }
 
           :where(.jl-home) .jl-heading { font-size: clamp(45px, 5vw, 60px); }
-          :where(.jl-home) .jl-scene { height: 610px; }
-
-          :where(.jl-home) .jl-hub-ring {
-            left: 54%;
-            width: clamp(270px, 34vw, 340px);
+          :where(.jl-home) .jl-scene {
+            --jl-orbit-size: clamp(270px, 34vw, 340px);
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            gap: 18px;
+            padding-top: clamp(135px, calc(305px - 17vw), 170px);
           }
 
-          :where(.jl-home) .jl-card-position { width: clamp(160px, 24%, 215px); }
-          :where(.jl-home) .jl-card-position.explore { left: 54%; }
-          :where(.jl-home) .jl-card-position.education { right: 1%; }
-          :where(.jl-home) .jl-card-position.estate { left: 4%; }
-          :where(.jl-home) .jl-card-position.events { right: 1%; }
+          :where(.jl-home) .jl-hub-ring {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: var(--jl-orbit-size);
+            flex-shrink: 0;
+            margin-left: 54%;
+            transform: translateX(-50%);
+          }
+
+          :where(.jl-home) .jl-pipes { display: none; }
+
+          :where(.jl-home) .jl-card-grid {
+            position: relative;
+            inset: auto;
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px 8px;
+          }
+
+          :where(.jl-home) .jl-card-position {
+            position: relative;
+            inset: auto !important;
+            width: clamp(160px, 24%, 215px);
+            justify-self: center;
+            transform: none !important;
+            animation: none !important;
+          }
 
           :where(.jl-home) .jl-photo-strip { height: 65px; }
           :where(.jl-home) .jl-category { min-height: 64px; padding: 7px; gap: 6px; }
@@ -417,6 +432,47 @@
           :where(.jl-home) .jl-category-title { font-size: 11px; }
           :where(.jl-home) .jl-category-subtitle { font-size: 9px; }
           :where(.jl-home) .jl-arrow { width: 23px; height: 23px; }
+        }
+
+        @media (min-width: 1201px) and (max-width: 1360px) {
+          :where(.jl-home) .jl-scene {
+            --jl-orbit-size: clamp(290px, 32vw, 390px);
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            gap: 18px;
+            padding-top: clamp(120px, calc(315px - 16vw), 170px);
+          }
+
+          :where(.jl-home) .jl-hub-ring {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: var(--jl-orbit-size);
+            flex-shrink: 0;
+            margin-left: 54%;
+            transform: translateX(-50%);
+          }
+
+          :where(.jl-home) .jl-pipes { display: none; }
+
+          :where(.jl-home) .jl-card-grid {
+            position: relative;
+            inset: auto;
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px 8px;
+          }
+
+          :where(.jl-home) .jl-card-position {
+            position: relative;
+            inset: auto !important;
+            width: clamp(190px, 23%, 265px);
+            justify-self: center;
+            transform: none !important;
+            animation: none !important;
+          }
         }
 
         @media (max-width: 767px) {

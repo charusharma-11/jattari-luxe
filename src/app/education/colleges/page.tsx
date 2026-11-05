@@ -5,7 +5,6 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import {
   ArrowLeft,
-  ArrowRight,
   ArrowUpRight,
   ExternalLink,
   GraduationCap,
@@ -183,11 +182,7 @@ export default function CollegesPage() {
               Back to Education
             </Link>
 
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B] md:text-sm">
-              Jattari Luxe · College Directory
-            </p>
-
-            <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-tight text-white md:text-7xl">
+            <h1 className="mt-6 max-w-3xl text-5xl font-semibold leading-tight text-white md:text-7xl jl-no-preheading">
               Colleges Near
               <span className="mt-2 block font-serif italic text-[#E4C58B]">
                 Jattari
@@ -213,10 +208,7 @@ export default function CollegesPage() {
         {/* INTRO: Editorial split layout */}
         <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:gap-20 md:px-12 lg:px-16 lg:py-24">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B89552]">
-              Plan Your Next Step
-            </p>
-            <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+            <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
               Find a college that fits your goals.
             </h2>
           </div>
@@ -244,10 +236,7 @@ export default function CollegesPage() {
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col justify-between gap-5 border-b border-[#D9DFD4] pb-8 md:flex-row md:items-end">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                  Explore Institutions
-                </p>
-                <h2 className="mt-4 text-3xl font-semibold md:text-5xl">
+                <h2 className="mt-4 text-3xl font-semibold md:text-5xl jl-no-preheading">
                   College directory
                 </h2>
                 <p className="mt-4 max-w-2xl leading-7 text-gray-600">
@@ -331,10 +320,7 @@ export default function CollegesPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 lg:px-16 lg:py-24">
           <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B89552]">
-                Admission Guide
-              </p>
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-4xl jl-no-preheading">
                 Before you apply
               </h2>
               <p className="mt-5 leading-8 text-gray-600">
@@ -365,30 +351,6 @@ export default function CollegesPage() {
           </div>
         </section>
 
-        {/* NEXT DESTINATION */}
-        <section className="px-6 pb-20 md:px-12 lg:px-16">
-          <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 rounded-[26px] bg-[#103F40] p-8 text-white md:flex-row md:items-center md:p-12">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#E4C58B]">
-                Continue Exploring
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-                Looking for coaching centres?
-              </h2>
-              <p className="mt-3 leading-7 text-white/75">
-                Explore coaching and preparation options in the area.
-              </p>
-            </div>
-
-            <Link
-              href="/education/coaching-centres"
-              className="inline-flex w-fit items-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#103F40] transition hover:-translate-y-1 hover:bg-white"
-            >
-              Explore Coaching
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />

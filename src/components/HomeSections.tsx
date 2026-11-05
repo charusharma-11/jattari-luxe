@@ -6,7 +6,6 @@ const imagePath = (name: string) => `/images/${name}`;
 
 const categories = [
   {
-    number: "01",
     title: "Explore Jattari",
     description:
       "Discover local places, neighbourhood highlights and the character of Jattari.",
@@ -15,7 +14,6 @@ const categories = [
     label: "Discover places",
   },
   {
-    number: "02",
     title: "Education",
     description:
       "Explore schools, colleges and learning opportunities in the area.",
@@ -24,7 +22,6 @@ const categories = [
     label: "Find education",
   },
   {
-    number: "03",
     title: "Local Businesses",
     description:
       "Find neighbourhood shops, everyday services and local businesses.",
@@ -33,7 +30,6 @@ const categories = [
     label: "Explore businesses",
   },
   {
-    number: "04",
     title: "Real Estate",
     description:
       "Discover residential projects, homes, plots and property opportunities.",
@@ -42,7 +38,6 @@ const categories = [
     label: "View properties",
   },
   {
-    number: "05",
     title: "Events & News",
     description:
       "Stay connected with local events, community updates and announcements.",
@@ -54,75 +49,68 @@ const categories = [
 
 const projects: {
   name: string;
-  type: string;
   description: string;
   image?: string;
 }[] = [
   {
     name: "Anugrah Homes",
-    type: "Residential Project",
     description:
       "Contact our team for project details and property information about Anugrah Homes.",
     image: "anugrah-homes.jpg",
   },
   {
     name: "Skyline Aero Homes",
-    type: "Property Project",
     description:
       "Request more information about Skyline Aero Homes through the Jattari Luxe team.",
     image: "skyline aero homes.jpg",
   },
   {
     name: "Dreams N Realtors",
-    type: "Real Estate",
     description:
       "Connect with our team to enquire about Dreams N Realtors and its property details.",
     image: "residential-home.jpg",
   },
   {
     name: "Jewar Lands",
-    type: "Land & Property",
     description:
       "Send an enquiry to request further information about Jewar Lands.",
     image: "hub-fields.jpg",
   },
   {
     name: "Shiva Associates",
-    type: "Property & Real Estate",
     description:
       "Contact our team for more information about Shiva Associates.",
     image: "hub-building-right.jpg",
   },
   {
     name: "Shree Balaji Group",
-    type: "Residential Plots",
     description:
       "Promotes A1 City, a residential plotted development near the Yamuna Expressway and Noida International Airport.",
+    image: "balajigroup.jpg",
   },
   {
     name: "Chhabra Properties",
-    type: "Real Estate Consultancy",
     description:
       "A property dealer and real estate consultant serving Noida, Greater Noida and Yamuna Expressway across residential and commercial properties, villas and plots.",
+    image: "chhabra.jpg",
   },
   {
     name: "Maxrow Properties",
-    type: "Property Advisory",
     description:
       "Provides property advisory across Noida, Greater Noida and Yamuna Expressway, including industrial, commercial, residential and investment properties.",
+    image: "maxrow.jpg",
   },
   {
     name: "Truevisory Realty",
-    type: "Real Estate Services",
     description:
       "Offers curated property options with buying guidance, investment advisory and legal assistance.",
+    image: "truevisory.jpg",
   },
 ];
 
 const businesses = [
   {
     name: "Local Property & Plot Services",
-    category: "REAL ESTATE & PROPERTY",
     description:
       "Explore residential plots, property options and local real estate opportunities around Jattari.",
     image: "residential-home.jpg",
@@ -130,7 +118,6 @@ const businesses = [
   },
   {
     name: "Local Shops & Services",
-    category: "NEIGHBOURHOOD DIRECTORY",
     description:
       "Discover nearby shops, useful services and businesses around Jattari.",
     image: "local-market.jpg",
@@ -139,17 +126,14 @@ const businesses = [
 ];
 
 function SectionHeading({
-  eyebrow,
   title,
   description,
 }: {
-  eyebrow: string;
   title: string;
   description: string;
 }) {
   return (
     <div className="jl-section-heading">
-      <span className="jl-eyebrow">{eyebrow}</span>
       <h2>{title}</h2>
       <p>{description}</p>
     </div>
@@ -193,8 +177,6 @@ export default function HomeSections() {
         </div>
 
         <div className="jl-discover-content">
-          <span className="jl-eyebrow">WELCOME TO JATTARI</span>
-
           <h2>
             Discover Jattari.
             <br />
@@ -252,7 +234,6 @@ export default function HomeSections() {
       <section className="jl-categories-section">
         <div className="jl-container">
           <SectionHeading
-            eyebrow="EXPLORE WHAT MATTERS"
             title="Everything around you, connected."
             description="From local shops to property projects, explore the categories that make Jattari easier to discover."
           />
@@ -269,10 +250,6 @@ export default function HomeSections() {
                     name={category.image}
                     alt={category.title}
                   />
-
-                  <span className="jl-card-number">
-                    {category.number}
-                  </span>
 
                   <span className="jl-card-arrow" aria-hidden="true">
                     ↗
@@ -295,7 +272,6 @@ export default function HomeSections() {
         <div className="jl-container">
           <div className="jl-heading-row">
             <SectionHeading
-              eyebrow="PROPERTY & LIVING"
               title="Featured real estate projects"
               description="Explore our featured projects and send an enquiry directly to the Jattari Luxe team."
             />
@@ -306,7 +282,7 @@ export default function HomeSections() {
           </div>
 
           <div className="jl-project-grid">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article className="jl-project-card" key={project.name}>
                 {project.image && (
                   <div className="jl-project-image">
@@ -314,18 +290,10 @@ export default function HomeSections() {
                       name={project.image}
                       alt={project.name}
                     />
-
-                    <span className="jl-project-tag">
-                      {project.type}
-                    </span>
                   </div>
                 )}
 
                 <div className="jl-project-copy">
-                  <span className="jl-project-index">
-                    PROJECT {String(index + 1).padStart(2, "0")}
-                  </span>
-
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
 
@@ -350,8 +318,6 @@ export default function HomeSections() {
       <section className="jl-business-section">
         <div className="jl-container jl-business-layout">
           <div className="jl-business-intro">
-            <span className="jl-eyebrow">SUPPORT LOCAL</span>
-
             <h2>
               Your neighbourhood
               <br />
@@ -382,10 +348,6 @@ export default function HomeSections() {
                 />
 
                 <div className="jl-business-info">
-                  <span className="jl-business-category">
-                    {business.category}
-                  </span>
-
                   <h3>{business.name}</h3>
                   <p>{business.description}</p>
                 </div>
@@ -403,7 +365,6 @@ export default function HomeSections() {
       <section className="jl-services-section">
         <div className="jl-container">
           <SectionHeading
-            eyebrow="LEARNING & OPPORTUNITY"
             title="Explore local education."
             description="Discover schools and learning opportunities around Jattari."
           />
@@ -418,7 +379,6 @@ export default function HomeSections() {
               </div>
 
               <div className="jl-service-copy">
-                <span className="jl-eyebrow">LEARN & GROW</span>
                 <h3>Education</h3>
 
                 <p>
@@ -440,7 +400,6 @@ export default function HomeSections() {
               </div>
 
               <div className="jl-service-copy">
-                <span className="jl-eyebrow">PROPERTY & LIVING</span>
                 <h3>Real Estate</h3>
 
                 <p>
@@ -462,7 +421,6 @@ export default function HomeSections() {
         <div className="jl-container">
           <div className="jl-heading-row">
             <SectionHeading
-              eyebrow="AROUND THE COMMUNITY"
               title="What's happening in Jattari?"
               description="A preview of local events, community activities and updates."
             />
@@ -480,10 +438,6 @@ export default function HomeSections() {
               />
 
               <span className="jl-news-overlay">
-                <span className="jl-news-label">
-                  COMMUNITY SPOTLIGHT
-                </span>
-
                 <span className="jl-news-title">
                   Local stories bring the community together.
                 </span>
@@ -500,9 +454,7 @@ export default function HomeSections() {
                   name="events-festival.jpg"
                   alt="Local cultural celebrations"
                 />
-
                 <div>
-                  <span className="jl-news-label">EVENTS</span>
                   <h3>Local events & celebrations</h3>
                   <span className="jl-news-read">
                     Explore events ↗
@@ -514,10 +466,10 @@ export default function HomeSections() {
                 <LocalImage
                   name="events-news.jpg"
                   alt="Local community updates"
+                  className="jl-news-announcement-image"
                 />
 
                 <div>
-                  <span className="jl-news-label">LOCAL UPDATES</span>
                   <h3>News and community announcements</h3>
                   <span className="jl-news-read">
                     Read updates ↗
@@ -529,31 +481,6 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* 07 — Contact CTA */}
-      <section className="jl-listing-cta">
-        <div className="jl-container jl-listing-inner">
-          <div>
-            <span className="jl-eyebrow jl-eyebrow-light">
-              FOR LOCAL BUSINESS OWNERS
-            </span>
-
-            <h2>
-              Your business belongs
-              <br />
-              in the local spotlight.
-            </h2>
-
-            <p>
-              Help more people discover your shop or service by listing
-              your business on Jattari Luxe.
-            </p>
-          </div>
-
-          <ContactButton className="jl-gold-button">
-            Contact <span aria-hidden="true">↗</span>
-          </ContactButton>
-        </div>
-      </section>
     </main>
   );
 }

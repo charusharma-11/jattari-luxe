@@ -12,7 +12,6 @@ import {
   MapPin,
   Ruler,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 
 import Navbar from "../../../components/Navbar";
@@ -90,7 +89,7 @@ const developers = [
 
 export default function ResidentialPlotsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       <Navbar />
 
       {/* HERO */}
@@ -109,12 +108,7 @@ export default function ResidentialPlotsPage() {
 
         <div className="relative mx-auto flex min-h-[650px] max-w-7xl items-center px-5 pb-24 pt-32 sm:px-8 lg:min-h-[730px] lg:px-12">
           <div className="max-w-3xl">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              <Sparkles size={14} className="text-[#D9B783]" />
-              Real Estate · Jattari
-            </div>
-
-            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl jl-no-preheading">
               Find a plot.
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -162,30 +156,13 @@ export default function ResidentialPlotsPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 hidden w-[330px] border-l border-t border-white/20 bg-[#103F40]/65 p-7 text-white backdrop-blur-xl md:block lg:w-[390px] lg:p-9">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#D9B783]">
-            Start with the essentials
-          </p>
-          <p className="mt-3 text-2xl font-medium leading-snug">
-            Location. Layout.
-            <br />
-            Documentation.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-white/70">
-            Compare the details before you commit to a property.
-          </p>
-        </div>
       </section>
 
       {/* INTRODUCTION */}
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              A thoughtful starting point
-            </p>
-
-            <h2 className="max-w-lg text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="max-w-lg text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               More than land.
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -223,15 +200,12 @@ export default function ResidentialPlotsPage() {
       {/* FEATURED DEVELOPMENTS */}
       <section
         id="featured-developments"
-        className="bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Explore the projects
-              </p>
-              <h2 className="max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Two names to explore.
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -374,16 +348,12 @@ export default function ResidentialPlotsPage() {
       {/* BUYING CHECKLIST */}
       <section
         id="plot-checklist"
-        className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Before you book
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 A better plot
                 <br />
                 starts with
@@ -437,40 +407,6 @@ export default function ResidentialPlotsPage() {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#103F40] px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-          <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute -right-5 -top-12 h-52 w-52 rounded-full border border-[#D9B783]/30" />
-
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D9B783]">
-                Your next step
-              </p>
-              <h2 className="text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-5xl">
-                Have a location or plot size in mind?
-              </h2>
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Tell us what you are looking for and contact the relevant
-                developer to confirm the available options.
-              </p>
-            </div>
-
-            <Link
-              href="/contact"
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#173F40] transition hover:-translate-y-1 hover:bg-[#E8D2A7]"
-            >
-              Get in touch
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
           </div>
         </div>
       </section>

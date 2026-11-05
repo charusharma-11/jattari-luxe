@@ -17,27 +17,13 @@
           position: relative;
           padding: 75px 24px;
           text-align: center;
-          background:
-            linear-gradient(
-               rgba(255, 245, 225, 0.35),
-    rgba(255, 245, 225, 0.45)
-            ),
-            url("/images/jobimages.jpg") center / cover no-repeat;
+          background: var(--teal);
           border-bottom: 1px solid var(--gold);
         }
 
         :where(.jobs-page) .hero-content {
           max-width: 800px;
           animation: rise 0.8s ease both;
-        }
-
-        :where(.jobs-page) .hero-content > span,
-:where(.jobs-page) .label {
-          color: var(--gold-dark);
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 2px;
-          line-height: 1.8;
         }
 
         :where(.jobs-page) .jobs-hero h1 {
@@ -215,10 +201,6 @@
           display: grid;
           grid-template-columns: 0.8fr 1.2fr;
           gap: 65px;
-        }
-
-        :where(.jobs-page) .career-tips .label {
-          color: var(--gold);
         }
 
         :where(.jobs-page) .career-tips h2 {

@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  ArrowUpRight,
   Smartphone,
   Monitor,
   Refrigerator,
@@ -15,7 +14,6 @@ import {
   MapPin,
   Phone,
   Search,
-  Store,
   Zap,
   ChevronDown,
   ChevronUp,
@@ -28,7 +26,6 @@ import {
 
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import ContactButton from "../../../components/ContactButton";
 
 const businesses = [
   {
@@ -80,7 +77,7 @@ const businesses = [
     name: "Lalit Computer Solution Jattari",
     category: "Computers, Printers & Repairs",
     address:
-      "Kua Wali Gali, Main Road, Jattari, Uttar Pradesh 202137",
+      "Opposite Paliwal Hospital, Kua Wali Gali, Main Road, Jattari, Uttar Pradesh 202137",
     phone: "",
     icon: Laptop,
     description:
@@ -90,7 +87,7 @@ const businesses = [
       "Printer support",
       "Ink and cartridge refilling",
     ],
-    note: "Kua Wali Gali",
+    note: "Opposite Paliwal Hospital",
   },
   {
     id: "divya",
@@ -236,7 +233,7 @@ export default function ElectronicsAppliancesPage() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       <Navbar />
 
       {/* FULL-WIDTH HERO */}
@@ -255,12 +252,7 @@ export default function ElectronicsAppliancesPage() {
 
         <div className="relative mx-auto grid min-h-[600px] max-w-[1600px] items-center gap-12 px-5 py-20 sm:px-8 lg:min-h-[670px] lg:grid-cols-[1.1fr_0.9fr] lg:px-14 xl:px-20">
           <div className="max-w-3xl">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white backdrop-blur-md">
-              <Zap size={15} className="text-[#D9B783]" />
-              Local Electronics · Jattari
-            </div>
-
-            <h1 className="text-5xl font-semibold leading-[1.03] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[82px]">
+            <h1 className="text-5xl font-semibold leading-[1.03] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl xl:text-[82px] jl-no-preheading">
               Power your
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -308,65 +300,6 @@ export default function ElectronicsAppliancesPage() {
             </div>
           </div>
 
-          {/* Decorative, image-free floating panel */}
-          <div className="relative mx-auto w-full max-w-[490px]">
-            <div className="absolute -right-3 -top-4 h-full w-[90%] rounded-[28px] border border-white/20 bg-white/[0.06] backdrop-blur-sm" />
-
-            <div className="relative rounded-[26px] border border-white/20 bg-[#F9F7F0] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.25)] sm:p-8">
-              <div className="flex items-center justify-between border-b border-[#DFE2D8] pb-5">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#164E52] text-white">
-                    <Store size={22} />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Jattari Luxe</p>
-                    <p className="mt-1 text-xs text-[#687B78]">
-                      Electronics directory
-                    </p>
-                  </div>
-                </div>
-                <span className="rounded-full bg-[#E8EEE5] px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-[#164E52]">
-                  Local guide
-                </span>
-              </div>
-
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#A27C45]">
-                Browse what you need
-              </p>
-
-              <div className="mt-4 space-y-3">
-                {categories.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-4 rounded-2xl border border-[#E2E4DB] bg-white p-4"
-                    >
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8EEE5] text-[#164E52]">
-                        <Icon size={21} />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="text-sm font-semibold">{item.label}</p>
-                        <p className="mt-1 text-xs leading-5 text-[#687B78]">
-                          {item.description}
-                        </p>
-                      </div>
-                      <ArrowUpRight
-                        size={17}
-                        className="shrink-0 text-[#A27C45]"
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-
-              <p className="mt-5 text-xs leading-6 text-[#687B78]">
-                Use the directory below to check shop details and available
-                contact information.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -374,10 +307,7 @@ export default function ElectronicsAppliancesPage() {
       <section className="px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#A27C45]">
-              Your local buying guide
-            </p>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Find the right
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -398,14 +328,11 @@ export default function ElectronicsAppliancesPage() {
       {/* CATEGORY FILTERS */}
       <section
         id="find-store"
-        className="border-y border-[#E2E4DB] bg-[#F3F4ED] px-5 py-12 sm:px-8 lg:px-12"
+        className="scroll-mt-24 border-y border-[#E2E4DB] bg-[#F3F4ED] px-5 py-12 sm:px-8 lg:px-12"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A27C45]">
-              Browse by need
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">
+            <h2 className="mt-2 text-2xl font-semibold sm:text-3xl jl-no-preheading">
               What are you looking for?
             </h2>
           </div>
@@ -454,15 +381,12 @@ export default function ElectronicsAppliancesPage() {
       {/* SEARCH + DIRECTORY */}
       <section
         id="local-stores"
-        className="px-5 py-16 sm:px-8 lg:px-12 lg:py-24"
+        className="scroll-mt-24 px-5 py-16 sm:px-8 lg:px-12 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#A27C45]">
-                Jattari business directory
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+              <h2 className="mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Local stores & services
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-[#687B78]">
@@ -678,10 +602,7 @@ export default function ElectronicsAppliancesPage() {
       <section className="bg-[#F1F0E8] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#A27C45]">
-              Before you visit
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl jl-no-preheading">
               Shop with confidence.
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#687B78]">
@@ -715,10 +636,7 @@ export default function ElectronicsAppliancesPage() {
       <section className="px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 rounded-[28px] bg-[#103F40] px-6 py-10 text-white sm:px-10 sm:py-14 lg:flex-row lg:items-center lg:px-14">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D9B783]">
-              Are you a local business owner?
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl jl-no-preheading">
               Help more people discover your store.
             </h2>
             <p className="mt-4 text-sm leading-7 text-white/70">
@@ -727,12 +645,13 @@ export default function ElectronicsAppliancesPage() {
             </p>
           </div>
 
-          <ContactButton
+          <Link
+            href="/list-your-business"
             className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#173F40] transition hover:-translate-y-1 hover:bg-[#E8D2A7]"
           >
-            Contact
+            List your business
             <ArrowRight size={17} />
-          </ContactButton>
+          </Link>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import {
@@ -76,7 +75,7 @@ export default function TransportConnectivityPage() {
     <>
       <Navbar />
 
-      <main className="overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+      <main className="jl-explore-content overflow-hidden bg-[#FFFDF8] text-[#164E52]">
         {/* HERO */}
         <section className="relative flex min-h-[520px] items-center md:min-h-[640px]">
           <Image
@@ -92,11 +91,7 @@ export default function TransportConnectivityPage() {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-12 lg:px-16">
             <div className="max-w-3xl">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B] md:text-sm">
-                Explore Jattari · Getting Around
-              </p>
-
-              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
                 Transport &
                 <br />
                 <span className="font-serif italic text-[#E4C58B]">
@@ -127,11 +122,7 @@ export default function TransportConnectivityPage() {
         <section className="px-6 py-20 md:px-12 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Get Around Jattari
-              </p>
-
-              <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Connected to everyday life and nearby destinations
               </h2>
             </div>
@@ -141,7 +132,7 @@ export default function TransportConnectivityPage() {
                 Roads and local transport play an important role in
                 connecting Jattari with nearby communities. Residents and
                 visitors can plan journeys for education, work, shopping,
-                daily travel and regional connections.
+                healthcare and regional travel.
               </p>
 
               <p className="mt-5 leading-8 text-gray-600">
@@ -160,11 +151,7 @@ export default function TransportConnectivityPage() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Your Travel Guide
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold md:text-5xl jl-no-preheading">
                 Ways to travel from Jattari
               </h2>
 
@@ -239,11 +226,7 @@ export default function TransportConnectivityPage() {
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Road Network
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Travel to nearby towns
               </h2>
 
@@ -304,11 +287,7 @@ export default function TransportConnectivityPage() {
         <section className="bg-[#103F40] text-white">
           <div className="mx-auto grid max-w-[1600px] md:grid-cols-2">
             <div className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-20 lg:px-16">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B]">
-                Regional Aviation
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Airport Connectivity
               </h2>
 
@@ -354,11 +333,7 @@ export default function TransportConnectivityPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Before You Travel
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Plan your journey with confidence
               </h2>
 
@@ -412,43 +387,6 @@ export default function TransportConnectivityPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="px-6 pb-20 md:px-12 md:pb-28">
-          <div className="mx-auto max-w-7xl rounded-3xl bg-[#F3F4ED] px-7 py-12 md:px-14 md:py-16">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-              Continue Exploring
-            </p>
-
-            <div className="mt-5 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-              <div>
-                <h2 className="max-w-3xl text-3xl font-semibold md:text-5xl">
-                  Discover more of Jattari
-                </h2>
-
-                <p className="mt-5 max-w-2xl leading-8 text-gray-600">
-                  Explore local neighbourhoods, markets and community
-                  destinations through Jattari Luxe.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/explore-jattari/areas-neighbourhoods"
-                  className="rounded-full bg-[#164E52] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#245C59]"
-                >
-                  Areas & Neighbourhoods
-                </Link>
-
-                <Link
-                  href="/explore-jattari"
-                  className="rounded-full border border-[#164E52]/30 px-6 py-3.5 text-sm font-semibold text-[#164E52] transition hover:bg-white"
-                >
-                  Explore Jattari
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

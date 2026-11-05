@@ -2,7 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowDownRight,
@@ -202,20 +201,6 @@ export default function GroceryDailyNeedsPage() {
                 </a>
               </div>
 
-              <div className="hidden border-l border-white/35 pl-6 pb-2 text-white lg:block">
-                <p className="text-xs uppercase tracking-[0.22em] text-[#E5D0A3]">
-                  The everyday edit
-                </p>
-                <p className="mt-4 text-3xl font-medium leading-tight">
-                  From pantry
-                  <br />
-                  to produce.
-                </p>
-                <p className="mt-4 text-sm leading-6 text-white/75">
-                  A simple directory of local places to help with daily
-                  shopping.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -240,14 +225,11 @@ export default function GroceryDailyNeedsPage() {
         {/* MASONRY SHOWCASE */}
         <section
           id="local-directory"
-          className="mx-auto max-w-[1440px] px-6 py-16 md:px-12 md:py-24"
+          className="scroll-mt-24 mx-auto max-w-[1440px] px-6 py-16 md:px-12 md:py-24"
         >
           <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.23em] text-[#9A7B43]">
-                The local directory
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.045em] md:text-6xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.045em] md:text-6xl jl-no-preheading">
                 Shop around Jattari
               </h2>
               <p className="mt-4 max-w-xl leading-7 text-[#667A70]">
@@ -354,10 +336,7 @@ export default function GroceryDailyNeedsPage() {
         <section className="bg-[#F0F3EB]">
           <div className="mx-auto grid max-w-[1320px] gap-12 px-6 py-16 md:grid-cols-[0.8fr_1.2fr] md:px-12 md:py-24">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.23em] text-[#9A7B43]">
-                Browse by need
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.045em] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.045em] md:text-5xl jl-no-preheading">
                 Find your everyday essentials.
               </h2>
               <p className="mt-5 max-w-md leading-7 text-[#63786D]">
@@ -438,31 +417,6 @@ export default function GroceryDailyNeedsPage() {
           </div>
         </section>
 
-        {/* FOOTNOTE */}
-        <section className="mx-auto max-w-[1320px] px-6 py-12 md:px-12 md:py-16">
-          <div className="flex flex-col gap-5 border-b border-[#DDE4D9] pb-10 sm:flex-row sm:items-center sm:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                A local guide
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-                Supporting Jattari&apos;s everyday businesses.
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-[#6B7D72]">
-                Addresses are based on available public listings. Please
-                verify the exact shop location locally before visiting.
-              </p>
-            </div>
-
-            <Link
-              href="/local-businesses"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-[#164E52] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#103F40]"
-            >
-              All local businesses
-              <ArrowUpRight size={17} />
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />

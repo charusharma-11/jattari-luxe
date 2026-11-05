@@ -1,5 +1,4 @@
 
-import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -267,7 +266,7 @@ export default function MarketsShoppingPage() {
     <>
       <Navbar />
 
-      <main className="overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+      <main className="jl-explore-content overflow-hidden bg-[#FFFDF8] text-[#164E52]">
         {/* HERO */}
         <section className="relative flex min-h-[570px] items-center md:min-h-[660px]">
           <Image
@@ -283,11 +282,7 @@ export default function MarketsShoppingPage() {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-12">
             <div className="max-w-3xl animate-[heroReveal_1s_ease-out_both]">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B] md:text-sm">
-                Discover Jattari · Shopping Guide
-              </p>
-
-              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
                 Markets &
                 <br />
                 <span className="font-serif italic text-[#E4C58B]">
@@ -326,11 +321,7 @@ export default function MarketsShoppingPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                The Local Shopping Experience
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Everyday needs,
                 <br />
                 <span className="font-serif italic text-[#B89552]">
@@ -368,11 +359,7 @@ export default function MarketsShoppingPage() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Local Business Directory
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold md:text-5xl jl-no-preheading">
                 Find shops by what you need
               </h2>
 
@@ -413,11 +400,7 @@ export default function MarketsShoppingPage() {
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                The Main Road
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Main Road Shopping Area
               </h2>
 
@@ -490,11 +473,7 @@ export default function MarketsShoppingPage() {
 
             <div className="flex items-center px-6 py-14 md:px-12 md:py-20 lg:px-16">
               <div className="max-w-xl">
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B]">
-                  Featured Market
-                </p>
-
-                <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+                <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                   Goverdhan Market
                 </h2>
 
@@ -533,11 +512,7 @@ export default function MarketsShoppingPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Before You Visit
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 A few smart shopping tips
               </h2>
 
@@ -599,43 +574,6 @@ export default function MarketsShoppingPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="px-6 pb-20 md:px-12 md:pb-28">
-          <div className="mx-auto max-w-7xl rounded-3xl bg-[#F3F4ED] px-7 py-12 md:px-14 md:py-16">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-              Continue Exploring
-            </p>
-
-            <div className="mt-5 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-              <div>
-                <h2 className="max-w-3xl text-3xl font-semibold md:text-5xl">
-                  Discover more of Jattari
-                </h2>
-
-                <p className="mt-5 max-w-2xl leading-8 text-gray-600">
-                  Explore local businesses, neighbourhoods and
-                  community places through Jattari Luxe.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/local-businesses"
-                  className="rounded-full bg-[#164E52] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#245C59]"
-                >
-                  Local Businesses
-                </Link>
-
-                <Link
-                  href="/explore-jattari"
-                  className="rounded-full border border-[#164E52]/30 px-6 py-3.5 text-sm font-semibold text-[#164E52] transition hover:bg-white"
-                >
-                  Explore Jattari
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

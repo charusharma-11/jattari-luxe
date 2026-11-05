@@ -18,13 +18,10 @@ import {
   ExternalLink,
   ShoppingBag,
   Compass,
-  Sparkles,
-  Coffee,
 } from "lucide-react";
 
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import ContactButton from "../../components/ContactButton";
 
 const categories = [
   {
@@ -135,7 +132,7 @@ const developments = [
 
 export default function LocalBusinessesPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       {/* NAVBAR */}
       <Navbar />
 
@@ -155,18 +152,10 @@ export default function LocalBusinessesPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#092D2E]/85 via-[#103F40]/55 to-[#103F40]/15" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#092D2E]/50 via-transparent to-transparent" />
 
-            <div className="pointer-events-none absolute -right-20 top-10 hidden h-[440px] w-[440px] rounded-full border border-white/10 lg:right-[8%] lg:block" />
-            <div className="pointer-events-none absolute -right-2 top-28 hidden h-[300px] w-[300px] rounded-full border border-[#D9B783]/20 lg:right-[13%] lg:block" />
-
             <div className="relative grid min-h-[620px] items-center gap-10 px-5 py-16 sm:min-h-[660px] sm:px-8 lg:min-h-[min(760px,calc(100vh-100px))] lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:px-10 lg:py-12 xl:px-16 2xl:px-20">
               {/* HERO LEFT CONTENT */}
               <div className="relative z-10 max-w-2xl">
-                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
-                  <Sparkles size={14} className="text-[#D9B783]" />
-                  Jattari · Local Business Guide
-                </div>
-
-                <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.05em] text-white sm:text-6xl lg:text-[clamp(3.5rem,5.2vw,5.5rem)] xl:text-[84px]">
+                <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.05em] text-white sm:text-6xl lg:text-[clamp(3.5rem,5.2vw,5.5rem)] xl:text-[84px] jl-no-preheading">
                   Discover
                   <br />
                   <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -192,12 +181,13 @@ export default function LocalBusinessesPage() {
                     />
                   </a>
 
-                  <ContactButton
+                  <Link
+                    href="/list-your-business"
                     className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/[0.08] px-6 py-4 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/[0.15] sm:px-7"
                   >
-                    Contact
+                    List your business
                     <ArrowUpRight size={17} />
-                  </ContactButton>
+                  </Link>
                 </div>
 
                 <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/70">
@@ -212,91 +202,6 @@ export default function LocalBusinessesPage() {
                 </div>
               </div>
 
-              {/* HERO RIGHT: LAYERED UI, NO EXTRA PHOTOGRAPHS */}
-              <div className="relative mx-auto min-h-[330px] w-full max-w-[520px] lg:min-h-[450px]">
-                <div className="absolute right-0 top-4 h-[290px] w-[88%] rounded-[28px] border border-white/15 bg-white/[0.06] backdrop-blur-md sm:h-[340px] lg:top-8 lg:h-[370px]" />
-
-                <div className="absolute right-0 top-10 w-[88%] rounded-[24px] border border-white/15 bg-[#F9F7F0] p-5 text-[#173F40] shadow-[0_30px_80px_rgba(0,0,0,0.25)] sm:p-7 lg:top-14">
-                  <div className="flex items-center justify-between border-b border-[#DDE1D6] pb-4">
-                    <div className="flex items-center gap-2">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#164E52] text-white">
-                        <Store size={18} />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold">Jattari Luxe</p>
-                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#8B968A]">
-                          Local discovery
-                        </p>
-                      </div>
-                    </div>
-
-                    <span className="rounded-full bg-[#E8EEE5] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#164E52]">
-                      Explore
-                    </span>
-                  </div>
-
-                  <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-[#A27C45]">
-                    Discover by category
-                  </p>
-
-                  <div className="mt-4 grid grid-cols-2 gap-3">
-                    <div className="rounded-2xl bg-[#E8EEE5] p-4">
-                      <Smartphone size={22} className="text-[#164E52]" />
-                      <p className="mt-3 text-sm font-semibold">Electronics</p>
-                      <p className="mt-1 text-[11px] text-[#687B78]">
-                        Tech & appliances
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl bg-[#F2E7D3] p-4">
-                      <ShoppingBasket size={22} className="text-[#8D7048]" />
-                      <p className="mt-3 text-sm font-semibold">Daily needs</p>
-                      <p className="mt-1 text-[11px] text-[#687B78]">
-                        Everyday shopping
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl bg-[#E9E4F3] p-4">
-                      <Shirt size={22} className="text-[#65578A]" />
-                      <p className="mt-3 text-sm font-semibold">Fashion</p>
-                      <p className="mt-1 text-[11px] text-[#687B78]">
-                        Style & clothing
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl bg-[#F5E4D8] p-4">
-                      <Coffee size={22} className="text-[#9A6548]" />
-                      <p className="mt-3 text-sm font-semibold">Food & cafes</p>
-                      <p className="mt-1 text-[11px] text-[#687B78]">
-                        Places to eat
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute -left-1 top-1 z-10 flex items-center gap-3 rounded-2xl border border-white/20 bg-[#164E52] px-4 py-3 text-white shadow-xl sm:-left-3 lg:left-0">
-                  <MapPin size={20} className="text-[#D9B783]" />
-                  <div>
-                    <p className="text-xs font-semibold">Around Jattari</p>
-                    <p className="mt-0.5 text-[10px] text-white/65">
-                      Local business guide
-                    </p>
-                  </div>
-                </div>
-
-                <div className="absolute -bottom-1 left-0 z-10 flex items-center gap-3 rounded-2xl border border-[#D9DED5] bg-white px-4 py-3 text-[#173F40] shadow-xl sm:bottom-0 sm:left-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#D9B783]">
-                    <Building2 size={20} />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold">Own a business?</p>
-                    <p className="mt-0.5 text-[10px] text-[#687B78]">
-                      Get discovered locally
-                    </p>
-                  </div>
-                  <ArrowUpRight size={16} />
-                </div>
-              </div>
             </div>
 
             {/* HERO BOTTOM STRIP */}
@@ -326,11 +231,7 @@ export default function LocalBusinessesPage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              The local discovery guide
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Everything local,
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -367,16 +268,12 @@ export default function LocalBusinessesPage() {
       {/* CATEGORY GRID — NO PHOTOGRAPHS HERE */}
       <section
         id="business-categories"
-        className="bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Browse the directory
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Find your kind
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -441,11 +338,7 @@ export default function LocalBusinessesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Explore with purpose
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Local discovery,
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -494,11 +387,7 @@ export default function LocalBusinessesPage() {
       <section className="bg-[#103F40] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D9B783]">
-              Explore developments around Jattari
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Local business meets
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -577,41 +466,6 @@ export default function LocalBusinessesPage() {
             Commercial availability, amenities and development details must be
             confirmed directly with the relevant developer.
           </p>
-        </div>
-      </section>
-
-      {/* LIST YOUR BUSINESS CTA */}
-      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#F1F0E8] px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-          <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border border-[#B89552]/25" />
-          <div className="pointer-events-none absolute -right-2 -top-6 h-40 w-40 rounded-full border border-[#B89552]/25" />
-
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                For local business owners
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight tracking-[-0.035em] sm:text-5xl">
-                Make your business easier to discover.
-              </h2>
-
-              <p className="mt-5 max-w-xl text-sm leading-7 text-[#687B78] sm:text-base">
-                Share accurate information about your business, location and
-                services so more people can discover what you offer.
-              </p>
-            </div>
-
-            <ContactButton
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#164E52] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40]"
-            >
-              Contact
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </ContactButton>
-          </div>
         </div>
       </section>
 

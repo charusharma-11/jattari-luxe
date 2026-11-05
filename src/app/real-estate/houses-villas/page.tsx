@@ -11,7 +11,6 @@ import {
   Ruler,
   ShieldCheck,
   ExternalLink,
-  Compass,
 } from "lucide-react";
 
 import Navbar from "../../../components/Navbar";
@@ -78,7 +77,7 @@ const buyingChecklist = [
 
 export default function HousesVillasPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       {/* NAVBAR */}
       <Navbar />
 
@@ -98,12 +97,7 @@ export default function HousesVillasPage() {
 
         <div className="relative mx-auto w-full max-w-7xl px-5 py-28 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              <House size={15} className="text-[#D9B783]" />
-              Houses & Villas · Jattari
-            </p>
-
-            <h1 className="text-5xl font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl jl-no-preheading">
               Find your place.
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -148,11 +142,7 @@ export default function HousesVillasPage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-20">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Find the right property
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               A home that fits
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -200,15 +190,11 @@ export default function HousesVillasPage() {
       {/* FEATURED PROJECTS */}
       <section
         id="featured-projects"
-        className="bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Featured developments
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Start your search
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -311,11 +297,7 @@ export default function HousesVillasPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Expand your search
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Look beyond
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -371,11 +353,7 @@ export default function HousesVillasPage() {
       <section className="bg-[#E8EEE5] px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Before you buy
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Make the decision
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -397,39 +375,6 @@ export default function HousesVillasPage() {
                 <p>{item}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#103F40] px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-          <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute -right-4 -top-10 h-48 w-48 rounded-full border border-[#D9B783]/30" />
-
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D9B783]">
-                Your next step
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight text-white sm:text-5xl">
-                Searching for a house, villa or plot?
-              </h2>
-
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Share your preferred location and property type to organise
-                your search around Jattari and nearby areas.
-              </p>
-            </div>
-
-            <Link
-              href="/contact"
-              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-semibold text-[#173F40] transition hover:-translate-y-1 hover:bg-[#E8D2A7]"
-            >
-              Send an enquiry
-              <ArrowRight size={17} />
-            </Link>
           </div>
         </div>
       </section>

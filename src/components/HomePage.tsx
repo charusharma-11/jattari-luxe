@@ -51,8 +51,6 @@ const categories = [
     photos: [
       "anugrah-homes.jpg",
       "residential-home.jpg",
-      "residential-building.jpg",
-      "hub-building-right.jpg",
     ],
     fallbackName: "residential-home.jpg",
   },
@@ -65,7 +63,6 @@ const categories = [
     photos: [
       "events-crowd.jpg",
       "events-festival.jpg",
-      "events-news.jpg",
     ],
     fallbackName: "events-crowd.jpg",
   },
@@ -144,8 +141,6 @@ export default function HomePage() {
 
         <div className="jl-layout relative">
           <div className="jl-copy">
-            <p className="jl-eyebrow">YOUR NEIGHBOURHOOD, CONNECTED</p>
-
             <h1 className="jl-heading">
               Explore
               <br />
@@ -194,12 +189,12 @@ export default function HomePage() {
               >
                 <g fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path
-                    d="M550 315 C490 220 410 145 310 80 M550 315 C635 220 730 145 850 80 M550 315 C445 315 340 315 205 315 M550 315 C665 315 760 315 910 315 M550 315 C625 405 705 485 830 565"
+                    d="M550 315 C480 405 390 505 300 565 M550 315 C550 280 550 245 550 215 M550 315 C445 315 340 315 205 315 M550 315 C665 315 760 315 910 315 M550 315 C625 405 705 485 830 565"
                     stroke="#8AD9A2"
                     strokeWidth="12"
                   />
                   <path
-                    d="M550 315 C490 220 410 145 310 80 M550 315 C635 220 730 145 850 80 M550 315 C445 315 340 315 205 315 M550 315 C665 315 760 315 910 315 M550 315 C625 405 705 485 830 565"
+                    d="M550 315 C480 405 390 505 300 565 M550 315 C550 280 550 245 550 215 M550 315 C445 315 340 315 205 315 M550 315 C665 315 760 315 910 315 M550 315 C625 405 705 485 830 565"
                     stroke="#FFFFFF"
                     strokeWidth="4"
                   />
@@ -240,7 +235,7 @@ export default function HomePage() {
                             name={name}
                             alt={`${item.title} photo`}
                             fallbackName={item.fallbackName}
-                            className="h-full w-full object-cover"
+                            className="h-full w-full object-contain"
                           />
                         </div>
                       ))}

@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import ContactButton from "../../../components/ContactButton";
 
 import {
   ArrowLeft,
@@ -16,12 +15,11 @@ import {
   House,
   Compass,
   ShieldCheck,
-  Sparkles,
   Landmark,
   Trees,
-  MoveUpRight,
   CheckCircle2,
   ExternalLink,
+  Send,
 } from "lucide-react";
 
 const developmentTypes = [
@@ -123,9 +121,27 @@ const buyingChecklist = [
   "Review the agreement carefully before making a commitment.",
 ];
 
+function EnquiryLink({
+  project,
+  className,
+}: {
+  project: string;
+  className: string;
+}) {
+  return (
+    <Link
+      href={`/contact?project=${encodeURIComponent(project)}`}
+      className={className}
+    >
+      Enquire Now
+      <Send size={16} />
+    </Link>
+  );
+}
+
 export default function FeaturedProjectsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#164E52]">
       <Navbar />
 
       {/* Hero: residential-home.jpg is used only here */}
@@ -153,12 +169,7 @@ export default function FeaturedProjectsPage() {
               Back to Real Estate
             </Link>
 
-            <div className="mt-12 inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
-              <Sparkles size={15} className="text-[#F1D49A]" />
-              Featured developments
-            </div>
-
-            <h1 className="mt-7 max-w-3xl text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl md:text-7xl">
+            <h1 className="mt-7 max-w-3xl text-5xl font-semibold leading-[1.04] tracking-tight text-white sm:text-6xl md:text-7xl jl-no-preheading">
               Discover places.
               <span className="mt-3 block font-serif italic text-[#F1D49A]">
                 Imagine what&apos;s next.
@@ -190,52 +201,6 @@ export default function FeaturedProjectsPage() {
             </div>
           </div>
 
-          {/* Text-only floating panel: no repeated image */}
-          <div className="relative mx-auto hidden w-full max-w-md lg:block">
-            <div className="absolute -left-12 top-16 h-28 w-28 rounded-full border border-white/40" />
-            <div className="absolute -right-5 -top-7 h-20 w-20 rounded-full border border-[#F1D49A]/70" />
-
-            <div className="relative rounded-[2rem] border border-white/35 bg-[#103F40]/65 p-7 shadow-2xl backdrop-blur-xl">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/25 bg-white/10">
-                <Building2 size={28} className="text-[#F1D49A]" />
-              </div>
-
-              <p className="mt-8 text-xs uppercase tracking-[0.2em] text-[#F1D49A]">
-                Jattari · Property Guide
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold leading-tight text-white">
-                A closer look at living.
-              </h2>
-
-              <p className="mt-4 leading-7 text-white/80">
-                Explore project names, review available information and send
-                your property questions through one website.
-              </p>
-
-              <div className="mt-7 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl border border-white/15 bg-white/10 p-4">
-                  <MapPin size={20} className="text-[#F1D49A]" />
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    Location
-                  </p>
-                  <p className="mt-1 text-xs leading-5 text-white/75">
-                    Check the project details
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-white/15 bg-white/10 p-4">
-                  <ShieldCheck size={20} className="text-[#F1D49A]" />
-                  <p className="mt-3 text-sm font-semibold text-white">
-                    Due diligence
-                  </p>
-                  <p className="mt-1 text-xs leading-5 text-white/75">
-                    Verify before deciding
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D9B783]/80 to-transparent" />
@@ -244,11 +209,7 @@ export default function FeaturedProjectsPage() {
       {/* Editorial introduction: no image reused */}
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20 lg:px-16 lg:py-28">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-            The bigger picture
-          </p>
-
-          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl jl-no-preheading">
             More than a property. A place to belong.
           </h2>
 
@@ -308,11 +269,7 @@ export default function FeaturedProjectsPage() {
       >
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-              Explore development styles
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
               Different spaces. Different possibilities.
             </h2>
 
@@ -392,11 +349,7 @@ export default function FeaturedProjectsPage() {
         <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D9B783]">
-                A closer look
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Residential developments around Jattari.
               </h2>
             </div>
@@ -456,12 +409,10 @@ export default function FeaturedProjectsPage() {
                       <ExternalLink size={16} />
                     </a>
 
-                    <ContactButton
+                    <EnquiryLink
+                      project={project.name}
                       className="inline-flex w-fit items-center gap-3 rounded-full border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-                    >
-                      Contact
-                      <ArrowUpRight size={16} />
-                    </ContactButton>
+                    />
                   </div>
                 </div>
               </article>
@@ -483,11 +434,7 @@ export default function FeaturedProjectsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-                More property names
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl jl-no-preheading">
                 More options to explore.
               </h2>
             </div>
@@ -529,12 +476,10 @@ export default function FeaturedProjectsPage() {
                   </p>
                 </div>
 
-                <ContactButton
+                <EnquiryLink
+                  project={project.name}
                   className="inline-flex w-fit items-center justify-center gap-3 rounded-full bg-[#164E52] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40] md:justify-self-end"
-                >
-                  Contact
-                  <ArrowUpRight size={16} />
-                </ContactButton>
+                />
               </article>
             ))}
           </div>
@@ -545,11 +490,7 @@ export default function FeaturedProjectsPage() {
       <section className="bg-[#E8EEE5] px-6 py-20 md:px-10 lg:px-16 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-              Before making a decision
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl jl-no-preheading">
               Look beyond the first impression.
             </h2>
 
@@ -594,15 +535,11 @@ export default function FeaturedProjectsPage() {
         </div>
       </section>
 
-      {/* Checklist and CTA */}
+      {/* Property checklist */}
       <section className="px-6 py-20 md:px-10 lg:px-16 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.85fr] lg:gap-14">
+        <div className="mx-auto max-w-7xl">
           <div className="rounded-[2rem] border border-[#D9DFD4] bg-white p-7 md:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-              Your property checklist
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold md:text-4xl jl-no-preheading">
               Be informed before you commit.
             </h2>
 
@@ -616,46 +553,6 @@ export default function FeaturedProjectsPage() {
                   <p className="leading-7 text-[#63736D]">{item}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="relative flex flex-col justify-between overflow-hidden rounded-[2rem] bg-[#164E52] p-7 text-white md:p-10">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full border border-white/10" />
-            <div className="pointer-events-none absolute -right-3 -top-3 h-32 w-32 rounded-full border border-[#D9B783]/30" />
-
-            <div className="relative">
-              <Sparkles size={30} className="text-[#D9B783]" />
-
-              <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#D9B783]">
-                Explore more
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl">
-                Your next discovery could start here.
-              </h2>
-
-              <p className="mt-5 leading-7 text-white/75">
-                Continue exploring residential options and property categories
-                across the Jattari real-estate guide.
-              </p>
-            </div>
-
-            <div className="relative mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/real-estate/residential-plots"
-                className="inline-flex items-center gap-2 rounded-full bg-[#D9B783] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#FFFDF8]"
-              >
-                Explore plots
-                <ArrowRight size={16} />
-              </Link>
-
-              <Link
-                href="/real-estate/houses-villas"
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-              >
-                Explore homes
-                <MoveUpRight size={16} />
-              </Link>
             </div>
           </div>
         </div>

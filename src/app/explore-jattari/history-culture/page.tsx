@@ -1,5 +1,4 @@
 
-import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 
@@ -58,7 +57,7 @@ export default function HistoryCulturePage() {
     <>
       <Navbar />
 
-      <main className="overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+      <main className="jl-explore-content overflow-hidden bg-[#FFFDF8] text-[#164E52]">
         {/* HERO */}
         <section className="group relative flex min-h-[540px] items-center overflow-hidden bg-[#103F40] sm:min-h-[650px]">
           <img
@@ -74,14 +73,7 @@ export default function HistoryCulturePage() {
 
           <div className="relative mx-auto w-full max-w-[1400px] px-5 py-24 sm:px-8 lg:px-12">
             <div className="max-w-4xl animate-[heroReveal_1s_ease-out_both]">
-              <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-[#D9B783]" />
-                <p className="text-xs font-semibold uppercase tracking-[3px] text-[#E7C995] sm:text-sm">
-                  Explore Jattari · History & Culture
-                </p>
-              </div>
-
-              <h1 className="mt-7 text-5xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-8xl">
+              <h1 className="mt-7 text-5xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-8xl jl-no-preheading">
                 The Spirit
                 <span className="mt-2 block font-normal italic text-[#E7C995]">
                   of Jattari.
@@ -105,12 +97,12 @@ export default function HistoryCulturePage() {
                   </span>
                 </a>
 
-                <Link
+                <a
                   href="/explore-jattari"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#D9B783] hover:bg-white/15"
                 >
                   Explore Jattari
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -127,11 +119,7 @@ export default function HistoryCulturePage() {
         <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                The Cultural Identity
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl jl-no-preheading">
                 Heritage lives in places, people and traditions.
               </h2>
 
@@ -156,7 +144,7 @@ export default function HistoryCulturePage() {
               <p>
                 Culture is not limited to monuments or festivals. Everyday
                 activities, local markets, shared meals and relationships
-                between neighbours also help shape a town's identity.
+                between neighbours also help shape a town&apos;s identity.
               </p>
             </div>
           </div>
@@ -169,11 +157,7 @@ export default function HistoryCulturePage() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Local Religious Heritage
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold sm:text-5xl jl-no-preheading">
                 Temples of Jattari
               </h2>
 
@@ -249,11 +233,7 @@ export default function HistoryCulturePage() {
             </div>
 
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Andareshwar Mahadev
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl jl-no-preheading">
                 A local shrine with a place in community life.
               </h2>
 
@@ -265,7 +245,7 @@ export default function HistoryCulturePage() {
               </p>
 
               <p className="mt-4 text-base leading-8 text-[#66736A]">
-                Visitors can learn about the temple's traditions by
+                Visitors can learn about the temple&apos;s traditions by
                 observing local customs and asking temple representatives
                 about visiting hours, worship arrangements and special
                 occasions.
@@ -287,11 +267,7 @@ export default function HistoryCulturePage() {
         {/* CULTURE AND TRADITIONS */}
         <section className="bg-[#F3F3EC] px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
           <div className="mx-auto max-w-7xl">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              Customs & Community
-            </p>
-
-            <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-5xl">
+            <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-5xl jl-no-preheading">
               The traditions that bring people together.
             </h2>
 
@@ -333,11 +309,7 @@ export default function HistoryCulturePage() {
         <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
           <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-                Religious Calendar
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl jl-no-preheading">
                 Sawan, Mondays and temple visits
               </h2>
 
@@ -368,7 +340,7 @@ export default function HistoryCulturePage() {
               <ul className="mt-6 space-y-4 text-sm leading-7 text-[#66736A]">
                 <li className="flex gap-3">
                   <span className="font-bold text-[#A17C43]">01</span>
-                  Follow the temple's dress and footwear guidance.
+                  Follow the temple&apos;s dress and footwear guidance.
                 </li>
                 <li className="flex gap-3">
                   <span className="font-bold text-[#A17C43]">02</span>
@@ -391,11 +363,7 @@ export default function HistoryCulturePage() {
         <section className="bg-[#103F40] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
           <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[3px] text-[#D9B783]">
-                Beyond the Temples
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl jl-no-preheading">
                 Everyday places tell their own stories.
               </h2>
 
@@ -403,7 +371,7 @@ export default function HistoryCulturePage() {
                 Cultural identity also develops through local shopping
                 areas, social visits, family occasions and interactions
                 between neighbours. These ordinary experiences help
-                connect the town's past with its present.
+                connect the town&apos;s past with its present.
               </p>
 
               <p className="mt-4 text-base leading-8 text-white/75">
@@ -412,13 +380,13 @@ export default function HistoryCulturePage() {
                 in Jattari.
               </p>
 
-              <Link
+              <a
                 href="/local-businesses"
                 className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#D9B783] px-7 py-4 text-sm font-bold text-[#103F40] transition duration-300 hover:-translate-y-1 hover:bg-[#E8D2AC]"
               >
                 Explore Local Businesses
                 <span aria-hidden="true">↗</span>
-              </Link>
+              </a>
             </div>
 
             <div className="overflow-hidden rounded-2xl">
@@ -432,41 +400,6 @@ export default function HistoryCulturePage() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
-        <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
-          <div className="mx-auto max-w-5xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[3px] text-[#A17C43]">
-              Continue Exploring
-            </p>
-
-            <h2 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl">
-              Discover more of Jattari.
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#66736A]">
-              Continue exploring the town's neighbourhoods, markets and
-              local connections through the Jattari Luxe guide.
-            </p>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/explore-jattari"
-                className="inline-flex items-center gap-2 rounded-full bg-[#164E52] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40]"
-              >
-                Back to Explore Jattari
-                <span aria-hidden="true">←</span>
-              </Link>
-
-              <Link
-                href="/explore-jattari/areas-neighbourhoods"
-                className="inline-flex items-center gap-2 rounded-full border border-[#164E52] px-7 py-4 text-sm font-semibold text-[#164E52] transition hover:-translate-y-1 hover:bg-[#E8EEE5]"
-              >
-                Areas & Neighbourhoods
-                <span aria-hidden="true">↗</span>
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

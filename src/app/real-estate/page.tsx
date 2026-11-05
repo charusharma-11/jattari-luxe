@@ -5,14 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import ContactButton from "../../components/ContactButton";
 
 import {
   ArrowRight,
   ArrowUpRight,
   MapPin,
   House,
-  Building2,
   Store,
   KeyRound,
   Landmark,
@@ -75,30 +73,6 @@ const featuredProjects = [
     image: "/images/skyline aero homes.jpg",
     href: "https://skylineaerohomes.com/",
   },
-  {
-    name: "Shree Balaji Group",
-    description:
-      "Promotes A1 City, a residential plotted development near the Yamuna Expressway and Noida International Airport.",
-    image: "/images/hub-fields.jpg",
-  },
-  {
-    name: "Chhabra Properties",
-    description:
-      "A property dealer and real estate consultant serving Noida, Greater Noida and Yamuna Expressway, with residential and commercial options, villas and plots.",
-    image: "/images/residential-home.jpg",
-  },
-  {
-    name: "Maxrow Properties",
-    description:
-      "Provides real estate advisory across Noida, Greater Noida and Yamuna Expressway, covering industrial, commercial, residential and investment properties.",
-    image: "/images/residential-building.jpg",
-  },
-  {
-    name: "Truevisory Realty",
-    description:
-      "Offers curated property options with buying guidance, investment advisory and legal assistance.",
-    image: "/images/hub-building-right.jpg",
-  },
 ];
 
 const buyingTips = [
@@ -124,7 +98,7 @@ const buyingTips = [
 
 export default function RealEstatePage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#164E52]">
       <Navbar />
 
       {/* Hero */}
@@ -143,12 +117,7 @@ export default function RealEstatePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#103F40]/40 via-transparent to-transparent" />
 
         <div className="relative mx-auto w-full max-w-7xl px-6 py-20 md:px-10 lg:px-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
-            <MapPin size={15} />
-            Jattari · Aligarh · Uttar Pradesh
-          </div>
-
-          <h1 className="mt-7 max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-7xl">
+          <h1 className="mt-7 max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
             Find your place.
             <span className="mt-3 block font-serif italic text-[#F1D49A]">
               Build your future.
@@ -183,11 +152,7 @@ export default function RealEstatePage() {
       {/* Introduction */}
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-20 lg:px-16 lg:py-24">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-            Real estate in Jattari
-          </p>
-
-          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl jl-no-preheading">
             A place to live, grow and invest thoughtfully.
           </h2>
 
@@ -250,11 +215,7 @@ export default function RealEstatePage() {
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-                Explore property types
-              </p>
-
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
                 Find the property that fits your plans.
               </h2>
 
@@ -324,11 +285,7 @@ export default function RealEstatePage() {
       >
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-              Featured developments
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
               Projects worth exploring.
             </h2>
 
@@ -371,22 +328,15 @@ export default function RealEstatePage() {
                   {project.description}
                 </p>
 
-                {project.href ? (
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white"
-                  >
-                    Visit project website
-                    <ArrowUpRight size={16} />
-                  </a>
-                ) : (
-                  <ContactButton className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white">
-                    Contact
-                    <ArrowUpRight size={16} />
-                  </ContactButton>
-                )}
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#164E52]/20 px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#164E52] hover:text-white"
+                >
+                  Visit project website
+                  <ArrowUpRight size={16} />
+                </a>
               </div>
             </article>
           ))}
@@ -397,11 +347,7 @@ export default function RealEstatePage() {
       <section className="bg-[#E8EEE5] px-6 py-20 md:px-10 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-              Property buying guide
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
               Make informed property decisions.
             </h2>
 
@@ -432,36 +378,6 @@ export default function RealEstatePage() {
                 </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-6 py-20 md:px-10 lg:px-16 lg:py-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#164E52] px-7 py-12 text-white md:px-14 md:py-16">
-          <div className="pointer-events-none absolute -right-12 -top-16 h-64 w-64 rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute right-8 top-0 h-40 w-40 rounded-full border border-[#D9B783]/30" />
-
-          <div className="relative max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D9B783]">
-              Connect with the community
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Have a property to list?
-            </h2>
-
-            <p className="mt-5 max-w-2xl leading-7 text-white/75">
-              Share property or project information to help people explore
-              available options in and around Jattari.
-            </p>
-
-            <ContactButton
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#FFFDF8] px-6 py-3.5 text-sm font-semibold text-[#164E52] transition duration-300 hover:-translate-y-1 hover:bg-[#D9B783]"
-            >
-              Contact
-              <ArrowUpRight size={17} />
-            </ContactButton>
           </div>
         </div>
       </section>

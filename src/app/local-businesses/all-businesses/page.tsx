@@ -6,10 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import ContactButton from "../../../components/ContactButton";
 import {
   ArrowDownRight,
-  ArrowUpRight,
   Camera,
   ChevronRight,
   Computer,
@@ -145,9 +143,6 @@ export default function AllBusinessesPage() {
                 <span className="h-px w-9 bg-[#D9B783]" />
                 Jattari Business Directory
               </div>
-              <span className="hidden border border-white/40 px-3 py-2 text-xs text-white/80 sm:block">
-                Independent & local
-              </span>
             </div>
 
             <div className="grid items-end gap-8 lg:grid-cols-[1fr_260px]">
@@ -177,17 +172,6 @@ export default function AllBusinessesPage() {
                 </a>
               </div>
 
-              <div className="hidden border-l border-white/35 pl-5 pb-1 lg:block">
-                <Store size={28} className="text-[#D9B783]" />
-                <p className="mt-4 text-2xl font-medium leading-tight text-white">
-                  Local names.
-                  <br />
-                  Useful places.
-                </p>
-                <p className="mt-3 text-sm leading-6 text-white/70">
-                  A growing guide to the businesses that serve Jattari.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -219,15 +203,12 @@ export default function AllBusinessesPage() {
         {/* CATEGORY EXPLORER */}
         <section
           id="business-explorer"
-          className="bg-[#F0F3EB] py-8 md:py-10"
+          className="scroll-mt-24 bg-[#F0F3EB] py-8 md:py-10"
         >
           <div className="mx-auto max-w-[1320px] px-6 md:px-12">
             <div className="mb-5 flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                  Explore by speciality
-                </p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl jl-no-preheading">
                   What are you looking for?
                 </h2>
               </div>
@@ -262,10 +243,7 @@ export default function AllBusinessesPage() {
         <section className="mx-auto max-w-[1440px] px-6 py-10 md:px-12 md:py-14">
           <div className="mb-7 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                The local index
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-[-0.045em] md:text-5xl">
+              <h2 className="mt-2 text-3xl font-semibold tracking-[-0.045em] md:text-5xl jl-no-preheading">
                 Businesses around Jattari
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-6 text-[#65796F]">
@@ -390,10 +368,7 @@ export default function AllBusinessesPage() {
         <section className="bg-[#164E52]">
           <div className="mx-auto flex max-w-[1320px] flex-col gap-5 px-6 py-9 md:flex-row md:items-center md:justify-between md:px-12 md:py-11">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E5D0A3]">
-                Join the local directory
-              </p>
-              <h2 className="mt-2 text-2xl font-medium text-white md:text-3xl">
+              <h2 className="mt-2 text-2xl font-medium text-white md:text-3xl jl-no-preheading">
                 Run a business in Jattari?
               </h2>
               <p className="mt-2 max-w-xl text-sm leading-6 text-white/75">
@@ -402,12 +377,13 @@ export default function AllBusinessesPage() {
               </p>
             </div>
 
-            <ContactButton
+            <Link
+              href="/list-your-business"
               className="inline-flex w-fit items-center gap-3 rounded-full bg-[#FFFDF8] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#D9B783]"
             >
-              Contact
+              List your business
               <ChevronRight size={17} />
-            </ContactButton>
+            </Link>
           </div>
         </section>
 

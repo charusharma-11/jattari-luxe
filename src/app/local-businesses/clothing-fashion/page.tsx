@@ -2,7 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import {
@@ -153,15 +152,11 @@ export default function ClothingFashionPage() {
         {/* DIRECTORY */}
         <section
           id="fashion-directory"
-          className="mx-auto max-w-[1440px] px-6 py-12 md:px-12 md:py-16"
+          className="scroll-mt-24 mx-auto max-w-[1440px] px-6 py-12 md:px-12 md:py-16"
         >
           <div className="mb-8 flex flex-col justify-between gap-4 border-b border-[#DDE4D9] pb-7 md:flex-row md:items-end">
             <div>
-              <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                <Sparkles size={15} />
-                Around your neighbourhood
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.045em] md:text-5xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.045em] md:text-5xl jl-no-preheading">
                 Clothing & fashion
               </h2>
             </div>
@@ -223,32 +218,6 @@ export default function ClothingFashionPage() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        {/* CLOSING STRIP */}
-        <section className="bg-[#164E52]">
-          <div className="mx-auto flex max-w-[1320px] flex-col gap-5 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-12 md:py-12">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E5D0A3]">
-                Explore local
-              </p>
-              <h2 className="mt-3 text-2xl font-medium text-white md:text-3xl">
-                Discover more of Jattari.
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-white/75">
-                Explore more local shops and everyday services in the
-                Jattari directory.
-              </p>
-            </div>
-
-            <Link
-              href="/local-businesses"
-              className="inline-flex w-fit items-center gap-3 rounded-full bg-[#FFFDF8] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#D9B783]"
-            >
-              All local businesses
-              <ArrowUpRight size={17} />
-            </Link>
           </div>
         </section>
 

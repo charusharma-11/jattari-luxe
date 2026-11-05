@@ -1,0 +1,271 @@
+@property --jl-motion-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --jl-motion-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --jl-motion-rotate-x {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --jl-motion-parallax-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --jl-motion-image-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --jl-motion-image-scale {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --jl-motion-image-rotate {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.motionStyles {
+  --jl-motion-styles-loaded: 1;
+}
+
+.observeSection,
+.observeText,
+.observeCard,
+.observeVisual {
+  transition-delay: var(--jl-explore-stagger, 0ms);
+  transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.observeSection {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  opacity: 0.98;
+  translate: 0 16px -12px;
+  transition-property: opacity, translate;
+  transition-duration: 720ms;
+}
+
+.observeText {
+  transform-style: preserve-3d;
+  opacity: 0.96;
+  translate: 0 12px -8px;
+  rotate: x 0.5deg;
+  transition-property: opacity, translate, rotate;
+  transition-duration: 620ms;
+}
+
+.observeCard {
+  transform-style: preserve-3d;
+  opacity: 0.96;
+  translate: 0 14px -16px;
+  rotate: x 0.65deg;
+  transition-property: opacity, translate, rotate, box-shadow;
+  transition-duration: 680ms;
+}
+
+.observeVisual {
+  transform-style: preserve-3d;
+  translate: 0 10px -10px;
+  rotate: y -0.5deg;
+  transition-property: translate, rotate;
+  transition-duration: 700ms;
+}
+
+.observeSection.inView,
+.observeText.inView,
+.observeCard.inView,
+.observeVisual.inView {
+  opacity: 1;
+  translate: 0 0 0;
+  rotate: none;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .observeCard.inView:hover {
+    translate: 0 -4px 10px;
+    rotate: y 1deg;
+  }
+
+  .observeCard.inView:hover .observeVisual {
+    translate: 0 0 8px;
+    rotate: y 7deg;
+  }
+}
+
+@keyframes jl-section-depth-reveal {
+  from {
+    --jl-motion-y: 26px;
+    --jl-motion-rotate-x: 1.6deg;
+  }
+
+  to {
+    --jl-motion-y: 0px;
+    --jl-motion-rotate-x: 0deg;
+  }
+}
+
+@keyframes jl-text-vertical-reveal {
+  from {
+    --jl-motion-y: 18px;
+    --jl-motion-rotate-x: 6deg;
+  }
+
+  to {
+    --jl-motion-y: 0px;
+    --jl-motion-rotate-x: 0deg;
+  }
+}
+
+@keyframes jl-text-left-reveal {
+  from {
+    --jl-motion-x: -18px;
+    --jl-motion-y: 8px;
+    --jl-motion-rotate-x: 6deg;
+  }
+
+  to {
+    --jl-motion-x: 0px;
+    --jl-motion-y: 0px;
+    --jl-motion-rotate-x: 0deg;
+  }
+}
+
+@keyframes jl-text-right-reveal {
+  from {
+    --jl-motion-x: 18px;
+    --jl-motion-y: 8px;
+    --jl-motion-rotate-x: -6deg;
+  }
+
+  to {
+    --jl-motion-x: 0px;
+    --jl-motion-y: 0px;
+    --jl-motion-rotate-x: 0deg;
+  }
+}
+
+@keyframes jl-text-paragraph-reveal {
+  from {
+    --jl-motion-y: 14px;
+    --jl-motion-rotate-x: 2deg;
+  }
+
+  to {
+    --jl-motion-y: 0px;
+    --jl-motion-rotate-x: 0deg;
+  }
+}
+
+@keyframes jl-image-reveal {
+  from {
+    --jl-motion-image-y: 12px;
+    --jl-motion-image-scale: 0.975;
+    --jl-motion-image-rotate: 2deg;
+  }
+
+  to {
+    --jl-motion-image-y: 0px;
+    --jl-motion-image-scale: 1;
+    --jl-motion-image-rotate: 0deg;
+  }
+}
+
+@keyframes jl-image-parallax {
+  from {
+    --jl-motion-parallax-y: -6px;
+  }
+
+  to {
+    --jl-motion-parallax-y: 6px;
+  }
+}
+
+@supports (animation-timeline: view()) and
+  (animation-range: entry 0% entry 45%) {
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type))) {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    translate: 0 var(--jl-motion-y, 0px);
+    rotate: x var(--jl-motion-rotate-x, 0deg);
+    animation: jl-section-depth-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) :is(h1, h2, h3, h4, h5, h6)) {
+    transform-style: preserve-3d;
+    translate: var(--jl-motion-x, 0px) var(--jl-motion-y, 0px);
+    rotate: x var(--jl-motion-rotate-x, 0deg);
+    animation: jl-text-vertical-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) h2:nth-of-type(even)),
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) h3:nth-of-type(odd)) {
+    animation-name: jl-text-left-reveal;
+  }
+
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) h2:nth-of-type(odd)),
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) h3:nth-of-type(even)) {
+    animation-name: jl-text-right-reveal;
+  }
+
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) p) {
+    animation-name: jl-text-paragraph-reveal;
+  }
+
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) img) {
+    translate: 0 calc(var(--jl-motion-image-y, 0px) + var(--jl-motion-parallax-y, 0px));
+    scale: var(--jl-motion-image-scale, 1);
+    rotate: x var(--jl-motion-image-rotate, 0deg);
+    animation-name: jl-image-reveal, jl-image-parallax;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1), linear;
+    animation-fill-mode: both, both;
+    animation-timeline: view(), view();
+    animation-range: entry 0% entry 55%, cover 0% cover 100%;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) :is(article, a[class*="card" i], div[class*="card" i]):hover) {
+    translate: 0 -3px;
+    rotate: y 0.8deg;
+    transition:
+      translate 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      rotate 280ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type))),
+  :global(main:not(.jl-home):not(.jl-explore-content) section:not(.jl-common-cta):not([data-page-cta]):not([class*="hero" i]):not([data-hero]):not(:is(main > section:first-child, main > nav + section:first-of-type, main > header + section:first-of-type)) :is(h1, h2, h3, h4, h5, h6, p, img)) {
+    animation: none !important;
+  }
+
+  .observeSection,
+  .observeText,
+  .observeCard,
+  .observeVisual {
+    opacity: 1;
+    transition: none;
+    translate: none;
+    rotate: none;
+  }
+}

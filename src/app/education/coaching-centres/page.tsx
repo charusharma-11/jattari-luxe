@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import ContactButton from "../../../components/ContactButton";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -155,12 +154,7 @@ export default function CoachingCentresPage() {
           </Link>
 
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#F3E5C8] backdrop-blur-sm">
-              <Sparkles size={14} />
-              Learning opportunities
-            </span>
-
-            <h1 className="mt-7 text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-7xl">
+            <h1 className="mt-7 text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
               Find the right place
               <span className="mt-2 block font-serif italic text-[#D9B783]">
                 to learn and grow.
@@ -194,11 +188,7 @@ export default function CoachingCentresPage() {
       {/* Intro */}
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20 lg:px-16 lg:py-28">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-            Education in Jattari
-          </p>
-
-          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl jl-no-preheading">
             A little guidance can make a big difference.
           </h2>
 
@@ -250,10 +240,7 @@ export default function CoachingCentresPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <div className="flex flex-col justify-between gap-6 border-b border-[#D5DDD1] pb-8 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-                Local institute directory
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
                 Coaching centres to explore
               </h2>
               <p className="mt-4 max-w-xl leading-7 text-[#63736D]">
@@ -331,10 +318,7 @@ export default function CoachingCentresPage() {
       {/* Learning areas */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16 lg:py-28">
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#A1844D]">
-            Find your direction
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl jl-no-preheading">
             What would you like to learn?
           </h2>
           <p className="mt-4 leading-7 text-[#63736D]">
@@ -365,36 +349,6 @@ export default function CoachingCentresPage() {
               </article>
             );
           })}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-6 pb-20 md:px-10 lg:px-16 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#164E52] px-7 py-12 text-white md:px-14 md:py-16">
-          <div className="pointer-events-none absolute -right-12 -top-20 h-64 w-64 rounded-full border border-white/10" />
-          <div className="pointer-events-none absolute -right-2 -top-10 h-44 w-44 rounded-full border border-[#D9B783]/40" />
-
-          <div className="relative max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#D9B783]">
-              Help grow the directory
-            </p>
-
-            <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-5xl">
-              Know a coaching centre in Jattari?
-            </h2>
-
-            <p className="mt-5 max-w-2xl leading-7 text-white/75">
-              Help students discover local learning options by sharing accurate
-              institute information.
-            </p>
-
-            <ContactButton
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#FFFDF8] px-6 py-3.5 text-sm font-semibold text-[#164E52] transition duration-300 hover:-translate-y-1 hover:bg-[#D9B783]"
-            >
-              Contact
-              <ArrowUpRight size={17} />
-            </ContactButton>
-          </div>
         </div>
       </section>
 

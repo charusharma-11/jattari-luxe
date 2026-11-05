@@ -178,11 +178,7 @@ export default function EducationPage() {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-12 lg:px-16">
             <div className="max-w-3xl">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B] md:text-sm">
-                Jattari Luxe · Learning & Opportunity
-              </p>
-
-              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
                 Education in
                 <br />
                 <span className="font-serif italic text-[#E4C58B]">
@@ -226,11 +222,7 @@ export default function EducationPage() {
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                A Complete Education Guide
-              </p>
-
-              <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 max-w-xl text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Every stage of learning,
                 <br />
                 <span className="font-serif italic text-[#B89552]">
@@ -314,11 +306,7 @@ export default function EducationPage() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-14 grid gap-6 md:grid-cols-[1fr_0.8fr] md:items-end md:gap-12">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                  Explore the Sections
-                </p>
-
-                <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
+                <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                   Find the education information you need
                 </h2>
               </div>
@@ -413,11 +401,7 @@ export default function EducationPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Student Resources
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Plan your learning journey
               </h2>
 
@@ -466,11 +450,7 @@ export default function EducationPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 md:grid-cols-[1fr_0.8fr] md:items-end">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                  Community & Living
-                </p>
-
-                <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight md:text-5xl">
+                <h2 className="mt-5 max-w-2xl text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                   Education is part of a growing community.
                 </h2>
               </div>
@@ -546,11 +526,7 @@ export default function EducationPage() {
         <section className="px-6 py-20 md:px-12 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Before You Apply
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-4xl">
+              <h2 className="mt-5 text-3xl font-semibold leading-tight md:text-4xl jl-no-preheading">
                 Keep your education plans organised
               </h2>
 
@@ -599,35 +575,6 @@ export default function EducationPage() {
           </div>
         </section>
 
-        {/* ADMISSION CTA */}
-        <section className="px-6 py-12 md:px-12 md:py-20">
-          <div className="mx-auto max-w-7xl rounded-3xl bg-[#103F40] px-7 py-12 text-white md:px-14 md:py-16">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B]">
-              Stay Informed
-            </p>
-
-            <div className="mt-5 grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-              <div>
-                <h2 className="max-w-3xl text-3xl font-semibold leading-tight md:text-5xl">
-                  Preparing for an admission?
-                </h2>
-
-                <p className="mt-5 max-w-2xl leading-8 text-white/75">
-                  Check admission information, required documents and
-                  official announcements before submitting an application.
-                </p>
-              </div>
-
-              <Link
-                href="/education/admission-updates"
-                className="inline-flex w-fit items-center gap-3 rounded-full bg-[#D9B783] px-7 py-3.5 text-sm font-semibold text-[#103F40] transition hover:bg-white"
-              >
-                View Admission Updates
-                <ArrowUpRight size={17} />
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

@@ -18,7 +18,7 @@ const nearbyCities = [
     name: "Aligarh",
     region: "Uttar Pradesh",
     description:
-      "The district's major urban centre, known for its educational institutions, markets and historic lock industry.",
+      "The district's major urban centre, known for its educational institutions, markets, healthcare services and historic lock industry.",
     map: "Aligarh Uttar Pradesh",
   },
   {
@@ -76,12 +76,18 @@ const localFeatures = [
   },
   {
     number: "04",
+    title: "Healthcare",
+    description:
+      "Check the location and availability of medical facilities, clinics and pharmacies for daily needs.",
+  },
+  {
+    number: "05",
     title: "Road Connectivity",
     description:
       "Jattari is situated on the Aligarh–Palwal road corridor, connecting it with surrounding towns and routes.",
   },
   {
-    number: "05",
+    number: "06",
     title: "Culture & Community",
     description:
       "Religious places, local customs and community spaces contribute to the character of the town.",
@@ -93,7 +99,7 @@ export default function AreasNeighbourhoodsPage() {
     <>
       <Navbar />
 
-      <main className="overflow-hidden bg-[#FFFDF8] text-[#164E52]">
+      <main className="jl-explore-content overflow-hidden bg-[#FFFDF8] text-[#164E52]">
         {/* HERO */}
         <section className="relative flex min-h-[570px] items-center overflow-hidden md:min-h-[660px]">
           <Image
@@ -109,11 +115,7 @@ export default function AreasNeighbourhoodsPage() {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-12">
             <div className="max-w-3xl animate-[heroReveal_1s_ease-out_both]">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B] md:text-sm">
-                Discover Jattari · Local Guide
-              </p>
-
-              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl">
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-7xl jl-no-preheading">
                 Areas &
                 <br />
                 <span className="font-serif italic text-[#E4C58B]">
@@ -122,7 +124,7 @@ export default function AreasNeighbourhoodsPage() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/90 md:text-lg">
-                Discover Jattari's residential surroundings, nearby
+                Discover Jattari&apos;s residential surroundings, nearby
                 cities, local facilities and its connection to the
                 wider region of western Uttar Pradesh and Delhi NCR.
               </p>
@@ -152,11 +154,7 @@ export default function AreasNeighbourhoodsPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-20">
             <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Life in Jattari
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 A local town with
                 <br />
                 <span className="font-serif italic text-[#B89552]">
@@ -215,11 +213,7 @@ export default function AreasNeighbourhoodsPage() {
         >
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto mb-14 max-w-3xl text-center">
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Explore the Region
-              </p>
-
-              <h2 className="text-3xl font-semibold md:text-5xl">
+              <h2 className="text-3xl font-semibold md:text-5xl jl-no-preheading">
                 Nearby Cities Around Jattari
               </h2>
 
@@ -304,11 +298,7 @@ export default function AreasNeighbourhoodsPage() {
               </div>
 
               <div>
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                  Jewar · Gautam Buddha Nagar
-                </p>
-
-                <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
+                <h2 className="text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                   Jewar Airport
                   <br />
                   <span className="font-serif italic text-[#B89552]">
@@ -329,7 +319,7 @@ export default function AreasNeighbourhoodsPage() {
                   For people in and around Jattari, the airport is an
                   important regional infrastructure development to
                   keep in mind when considering travel connections,
-                  logistics and the wider area's development.
+                  logistics and the wider area&apos;s development.
                 </p>
 
                 <div className="mt-7 space-y-4">
@@ -404,18 +394,14 @@ export default function AreasNeighbourhoodsPage() {
         <section className="bg-[#F3F4ED] px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl">
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Everyday Living
-              </p>
-
-              <h2 className="text-3xl font-semibold md:text-5xl">
+              <h2 className="text-3xl font-semibold md:text-5xl jl-no-preheading">
                 What to Explore in Jattari
               </h2>
 
               <p className="mt-5 leading-8 text-gray-600">
                 Whether you live locally or are visiting, these
                 neighbourhood features can help you understand the
-                area's everyday facilities and community life.
+                area&apos;s everyday facilities and community life.
               </p>
             </div>
 
@@ -446,11 +432,7 @@ export default function AreasNeighbourhoodsPage() {
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16">
             <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#B89552]">
-                Homes & Living
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="text-3xl font-semibold leading-tight md:text-5xl jl-no-preheading">
                 Looking for a place to live?
               </h2>
 
@@ -485,55 +467,6 @@ export default function AreasNeighbourhoodsPage() {
           </div>
         </section>
 
-        {/* MORE PAGES */}
-        <section className="px-6 pb-20 md:px-12 md:pb-28">
-          <div className="mx-auto max-w-7xl rounded-3xl bg-[#164E52] px-7 py-12 md:px-14 md:py-16">
-            <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E4C58B]">
-                Continue Exploring
-              </p>
-
-              <h2 className="mt-5 text-3xl font-semibold text-white md:text-5xl">
-                Discover more with Jattari Luxe
-              </h2>
-
-              <p className="mt-5 leading-8 text-white/75">
-                Explore the town's heritage, markets and transport
-                connections through our local discovery guide.
-              </p>
-            </div>
-
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link
-                href="/explore-jattari/history-culture"
-                className="rounded-full bg-[#D9B783] px-6 py-3.5 text-sm font-semibold text-[#103F40] transition hover:bg-white"
-              >
-                History & Culture
-              </Link>
-
-              <Link
-                href="/explore-jattari/markets-shopping"
-                className="rounded-full border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-              >
-                Markets & Shopping
-              </Link>
-
-              <Link
-                href="/explore-jattari/transport-connectivity"
-                className="rounded-full border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-              >
-                Transport & Connectivity
-              </Link>
-
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#164E52]"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

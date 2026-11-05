@@ -2,7 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import {
@@ -10,7 +9,6 @@ import {
   ArrowUpRight,
   Cable,
   Hammer,
-  Lightbulb,
   MapPin,
   Paintbrush,
   Pipette,
@@ -160,9 +158,6 @@ export default function HardwareElectricalPage() {
                 <span className="h-px w-9 bg-[#D9B783]" />
                 Jattari Trade Directory
               </div>
-              <span className="border border-white/30 px-3 py-2 text-[10px] uppercase tracking-[0.17em] text-white/80">
-                Hardware / Electrical / Building
-              </span>
             </div>
 
             <div className="grid items-end gap-9 lg:grid-cols-[1fr_270px]">
@@ -193,20 +188,6 @@ export default function HardwareElectricalPage() {
                 </a>
               </div>
 
-              <div className="hidden border-l border-white/40 pl-6 pb-2 lg:block">
-                <Zap size={29} className="text-[#D9B783]" />
-                <p className="mt-5 text-xs uppercase tracking-[0.18em] text-white/65">
-                  Local trade
-                </p>
-                <p className="mt-2 text-2xl font-medium leading-tight text-white">
-                  Supplies for
-                  <br />
-                  everyday work.
-                </p>
-                <p className="mt-3 text-sm leading-6 text-white/70">
-                  A practical guide to nearby hardware and electrical shops.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -262,14 +243,11 @@ export default function HardwareElectricalPage() {
         {/* DIRECTORY: TECHNICAL SPEC SHEET STYLE */}
         <section
           id="trade-directory"
-          className="mx-auto max-w-[1440px] px-6 py-12 md:px-12 md:py-16"
+          className="scroll-mt-24 mx-auto max-w-[1440px] px-6 py-12 md:px-12 md:py-16"
         >
           <div className="mb-8 grid gap-5 border-b-2 border-[#164E52] pb-6 md:grid-cols-[1fr_300px] md:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7B43]">
-                Local suppliers & shops
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.045em] md:text-5xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.045em] md:text-5xl jl-no-preheading">
                 The trade directory
               </h2>
             </div>
@@ -345,30 +323,6 @@ export default function HardwareElectricalPage() {
           </p>
         </section>
 
-        {/* CLOSING STRIP */}
-        <section className="bg-[#164E52]">
-          <div className="mx-auto flex max-w-[1320px] flex-col gap-5 px-6 py-9 md:flex-row md:items-center md:justify-between md:px-12">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E5D0A3]">
-                More from Jattari
-              </p>
-              <h2 className="mt-2 text-2xl font-medium text-white md:text-3xl">
-                Explore more local businesses.
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-white/75">
-                Discover more stores and services across the neighbourhood.
-              </p>
-            </div>
-
-            <Link
-              href="/local-businesses"
-              className="inline-flex w-fit items-center gap-3 bg-[#FFFDF8] px-5 py-3 text-sm font-semibold text-[#164E52] transition hover:bg-[#D9B783]"
-            >
-              All local businesses
-              <ArrowUpRight size={17} />
-            </Link>
-          </div>
-        </section>
       </main>
 
       <Footer />

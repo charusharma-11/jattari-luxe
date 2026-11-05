@@ -11,12 +11,10 @@ import {
   House,
   Store,
   Building2,
-  Clock3,
   ShieldCheck,
   ExternalLink,
   FileCheck2,
   Search,
-  CalendarDays,
 } from "lucide-react";
 
 import Navbar from "../../../components/Navbar";
@@ -129,7 +127,7 @@ const searchAreas = [
 
 export default function RentLeasePage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFDF8] text-[#173F40]">
+    <main className="min-h-screen overflow-clip bg-[#FFFDF8] text-[#173F40]">
       {/* NAVBAR */}
       <Navbar />
 
@@ -151,12 +149,7 @@ export default function RentLeasePage() {
 
         <div className="relative mx-auto flex min-h-[640px] max-w-7xl items-center px-5 py-28 sm:px-8 lg:min-h-[700px] lg:px-12">
           <div className="max-w-3xl">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              <KeyRound size={15} className="text-[#D9B783]" />
-              Rent & Lease · Jattari
-            </div>
-
-            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl">
+            <h1 className="text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-8xl jl-no-preheading">
               Find your space.
               <br />
               <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -204,41 +197,18 @@ export default function RentLeasePage() {
           </div>
         </div>
 
-        {/* Floating information panel */}
-        <div className="absolute bottom-0 right-0 hidden w-[340px] border-l border-t border-white/20 bg-[#103F40]/75 p-7 text-white backdrop-blur-xl md:block lg:w-[390px] lg:p-9">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#D9B783]">
-            Find the right fit
-          </p>
-
-          <p className="mt-3 text-2xl font-medium leading-snug">
-            Residential.
-            <br />
-            Commercial.
-            <br />
-            Flexible leasing.
-          </p>
-
-          <p className="mt-3 text-sm leading-6 text-white/70">
-            Explore your options and confirm availability directly with the
-            property owner or developer.
-          </p>
-        </div>
       </section>
 
 
       {/* RENTAL CATEGORIES */}
       <section
         id="rental-types"
-        className="bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-[#F1F0E8] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Find the right fit
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 What do you need
                 <br />
                 <span className="font-serif font-normal italic text-[#A27C45]">
@@ -300,11 +270,7 @@ export default function RentLeasePage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Explore local developments
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Two projects to know.
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -420,11 +386,7 @@ export default function RentLeasePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#D9B783]">
-                Where to look
-              </p>
-
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
                 Search locally.
                 <br />
                 <span className="font-serif font-normal italic text-[#E8D2A7]">
@@ -480,11 +442,7 @@ export default function RentLeasePage() {
       <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-              Before signing
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl jl-no-preheading">
               Know the terms.
               <br />
               <span className="font-serif font-normal italic text-[#A27C45]">
@@ -527,42 +485,6 @@ export default function RentLeasePage() {
                 </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#F1F0E8] px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
-          <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border border-[#B89552]/25" />
-          <div className="pointer-events-none absolute -right-2 -top-6 h-40 w-40 rounded-full border border-[#B89552]/25" />
-
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#A27C45]">
-                Find your next space
-              </p>
-
-              <h2 className="text-3xl font-semibold leading-tight tracking-[-0.035em] sm:text-5xl">
-                Tell us what you want to rent or lease.
-              </h2>
-
-              <p className="mt-5 max-w-xl text-sm leading-7 text-[#687B78] sm:text-base">
-                Share your preferred location and property type to start
-                organising your search around Jattari and nearby areas.
-              </p>
-            </div>
-
-            <Link
-              href={`/contact?interest=${encodeURIComponent("Rent and Lease")}`}
-              className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#164E52] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#103F40]"
-            >
-              Contact us
-              <ArrowRight
-                size={17}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
           </div>
         </div>
       </section>
